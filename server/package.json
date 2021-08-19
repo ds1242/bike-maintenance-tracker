@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Bike maintenance tracker to add track wear on parts and service intervals",
+  "main": "server.js",
+  "dependencies": {
+    "apollo-server-express": "^3.1.2",
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.1",
+    "graphql": "^15.5.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "watch": "nodemon server.js"
+  },
+  "author": "David Shaw",
+  "license": "ISC"
+}
