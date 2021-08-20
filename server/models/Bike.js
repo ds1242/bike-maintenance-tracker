@@ -26,13 +26,19 @@ const bikeSchema = new Schema(
         forkHours: {
             type: String
         },
-        cassetteName: {
+        cassetteMake: {
+            type: String
+        },
+        cassetteModel: {
             type: String
         },
         cassetteMiles: {
             type: String
         },
-        chainringName: {
+        chainringMake: {
+            type: String
+        },
+        chainringModel: {
             type: String
         },
         chainringMiles: {

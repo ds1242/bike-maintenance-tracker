@@ -23,6 +23,14 @@ const userSchema = new Schema(
             required: true,
             minLength: [6, 'Password must be longer than six characters']
         },
+        userImage: {
+            type: String,
+            default: 'https://user-images.githubusercontent.com/79877350/129462845-207566b3-125a-42dd-88ba-f518b41a4c3b.png'
+        },
+        userBio: {
+            type: String,
+            maxLength: 280
+        },
         bikes: [
             {
                 type: Schema.Types.ObjectId,
