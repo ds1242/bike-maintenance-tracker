@@ -36,6 +36,19 @@ const resolvers = {
         const token = signToken(user)
 
         return { token, user };
+      },
+      addBike: async(parent, args, context) => {
+        if(context.user) {
+          const bike = await Bike.create({...args, user_id: context.user._id})
+
+          await User.findByIdAndUpdate(
+            { _id: context.user._id },
+            { $push: { bikes: bike._id } },
+            { new: true, runValidators: true }
+          );
+          return bike
+        }
+        throw new AuthenticationError('You must be logged in')
       }
     }
 };

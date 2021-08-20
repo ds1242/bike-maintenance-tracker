@@ -24,7 +24,8 @@ const bikeSchema = new Schema(
             type: String
         },
         forkHours: {
-            type: String
+            type: String,
+            default: 0
         },
         cassetteMake: {
             type: String
@@ -33,7 +34,8 @@ const bikeSchema = new Schema(
             type: String
         },
         cassetteMiles: {
-            type: String
+            type: String,
+            default: 0
         },
         chainringMake: {
             type: String
@@ -42,13 +44,15 @@ const bikeSchema = new Schema(
             type: String
         },
         chainringMiles: {
-            type: String
+            type: String,
+            default: 0
         },
         chainName: {
             type: String
         },
         chainMiles: {
-            type: String
+            type: String,
+            default: 0
         },
         shockMake: {
             type: String
@@ -57,7 +61,9 @@ const bikeSchema = new Schema(
             type: String
         },
         shockHours: {
-            type: String
+            type: String,
+            default: 0
+            
         },
         frontDeraileurMake: {
             type: String
@@ -66,7 +72,8 @@ const bikeSchema = new Schema(
             type: String
         },
         frontDeraileurMiles: {
-            type: String
+            type: String,
+            default: 0
         },
         rearDeraileurMake: {
             type: String
@@ -75,9 +82,13 @@ const bikeSchema = new Schema(
             type: String
         },
         rearDeraileurMiles: {
-            type: String
+            type: String,
+            default: 0
         },
         bikePhoto: {
+            type: String
+        },
+        user_id: {
             type: String
         }        
     }
