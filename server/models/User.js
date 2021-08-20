@@ -2,7 +2,10 @@ const { Schema, model, mongo } = require('mongoose');
 const bcrypt = require('bcrypt');
 
 const userSchema = new Schema(
-    {
+    {   
+        name: {
+            type: String
+        },
         username: {
             type: String,
             required: true,
@@ -18,7 +21,7 @@ const userSchema = new Schema(
         password: {
             type: String,
             required: true,
-            minLength: 6
+            minLength: [6, 'Password must be longer than six characters']
         },
         bikes: [
             {
