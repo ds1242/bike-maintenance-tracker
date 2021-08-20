@@ -47,8 +47,8 @@ const typeDefs = gql`
         bikes:[Bike]
     }
     type Mutation {
-        addUser(name: String!, username: String!, email: String!, userImage: String, userBio: String: password: String!): User
-        
+        addUser(name: String!, username: String!, email: String!, userImage: String, userBio: String: password: String!): Auth
+
     }
 `;
 
