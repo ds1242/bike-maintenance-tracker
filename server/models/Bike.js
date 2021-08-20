@@ -1,5 +1,5 @@
-const { Schema, model, mongo } = require('mongoose');
-const bcrypt = require('bcrypt');
+const { Schema, model } = require('mongoose');
+
 
 const bikeSchema = new Schema(
     {
@@ -83,6 +83,6 @@ const bikeSchema = new Schema(
     }
 );
 
-const Bike = mongoose.model('Bike', bikeSchema);
+const Bike = model('Bike', bikeSchema);
 
 module.exports = Bike;
