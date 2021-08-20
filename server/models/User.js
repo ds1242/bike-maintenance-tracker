@@ -35,11 +35,14 @@ const userSchema = new Schema(
     },
     {
         toJSON: {
-            virtuals: true
+            virtuals: true,
+            getters: true
         }
     }
 );
-
+userSchema.virtual('friendCount').get(function() {
+    return this.friends.minLength;
+})
 userSchema.pre('save', async function(next) {
     if(this.isNew || this.isModified('password')) {
         const saltRounds = 10;
