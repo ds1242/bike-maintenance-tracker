@@ -64,6 +64,17 @@ const resolvers = {
         }
         throw new AuthenticationError('You must be logged in')
       },
+      updateBike: async (parent, args) => {
+        if(args._id) {
+          const updatedBike = await Bike.findOneAndUpdate(
+            { _id: args._id },
+            args,
+            { new: true }
+          );
+          return updatedBike;
+        }
+        throw new AuthenticationError('You need to be logged in to update a bike')
+      },
       login: async (parent, {email, password}) => {
         const user = await User.findOne({email})
 
