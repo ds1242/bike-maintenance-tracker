@@ -45,6 +45,7 @@ const typeDefs = gql`
         users: [User]
         user(_id: ID): User
         bikes: [Bike]
+        bike(_id: ID): Bike
     }
     type Auth {
         token: ID!

@@ -28,6 +28,9 @@ const resolvers = {
           .select('-__v -password')
           .populate('bikes')
           .populate('friends')
+      },
+      bike: async(parent, {_id}) => {
+        return Bike.findOne({_id})
       }
     },
     Mutation: {

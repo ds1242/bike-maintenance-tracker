@@ -54,3 +54,37 @@ export const QUERY_SINGLE_USER = gql`
     }
   }
 `;
+
+export const QUERY_SINGLE_BIKE = gql`
+    query getSingleBike($_id: ID) {
+        bike(_id: $_id) {
+        _id
+        make
+        model
+        year
+        bikeType
+        forkMake
+        forkModel
+        forkHours
+        cassetteMake
+        cassetteModel
+        cassetteMiles
+        chainringMake
+        chainringModel
+        chainringMiles
+        chainName
+        chainMiles
+        shockMake
+        shockModel
+        shockHours
+        frontDeraileurMake
+        frontDeraileurModel
+        frontDeraileurModel
+        frontDeraileurMiles
+        rearDeraileurMake
+        rearDeraileurModel
+        rearDeraileurMiles
+        bikePhoto    
+        }
+    }
+`;
