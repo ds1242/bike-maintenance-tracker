@@ -40,6 +40,17 @@ const resolvers = {
 
         return { token, user };
       },
+      updateUser: async(parent, args, context) => {
+        if(context.user) {
+          const user = await User.findOneAndUpdate(
+            { _id: context.user._id },
+            args,
+            { new: true, runValidators: true }
+          );
+          return user
+        }
+        throw new AuthenticationError('You must be logged in to edit a profile')
+      },
       addBike: async(parent, args, context) => {
         if(context.user) {
           const bike = await Bike.create({...args, user_id: context.user._id})
