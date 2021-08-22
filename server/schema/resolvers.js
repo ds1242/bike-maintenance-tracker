@@ -49,6 +49,20 @@ const resolvers = {
           return bike
         }
         throw new AuthenticationError('You must be logged in')
+      },
+      login: async (parent, {email, password}) => {
+        const user = await User.findOne({email})
+
+        if(!user) {
+          throw new AuthenticationError('Incorrect Credentials');
+        }
+        const correctPW = await user.isCorrectPassword(password)
+
+        if(!correctPW) {
+          throw new AuthenticationError('Incorrect Credentials');
+        }
+        const token = signToken(user);
+        return { token, user };
       }
     }
 };
