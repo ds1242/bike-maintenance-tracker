@@ -4,14 +4,23 @@ import { Link } from 'react-router-dom'
 import { Button } from 'react-bootstrap'
 import './Nav.css';
 
-function Nav() {
-    function showNav() {
+function Nav() {  
+    const logout = event => {
+        event.preventDefault();
+        Auth.logout();
+    };
+        function showNav() {
         if(Auth.loggedIn()) {
             return (
                 <ul className="navbar-nav">
                     <li className='navActive'>
                         <Link to={'/profile'} className='nav-link active'>
                             <h3>Profile</h3>
+                        </Link>
+                    </li>
+                    <li className='navActive' onClick={logout}>
+                        <Link to={'/'} className='nav-link active'>
+                            <h3>Logout</h3>
                         </Link>
                     </li>
                 </ul>

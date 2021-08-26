@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { Link } from 'react-router-dom';
 import { LOGIN } from '../utils/mutations'
 import Auth from '../utils/auth';
 import { Button } from 'react-bootstrap'
@@ -41,11 +40,11 @@ const Login = props => {
                 <input className='form-input' name='password' type='password' id='password' placeholder='Password' value={formState.password} onChange={handleChange} />
                 <Button as="input" type="submit" value="Submit" />{' '}
             </form>
-                    {error ? (
-                        <div>
-                            <p className="error-text">The provided credentials are incorrect</p>
-                        </div>
-                    ) : null}
+                {error ? (
+                    <div>
+                        <p className="error-text">The provided credentials are incorrect</p>
+                    </div>
+                ) : null}
         </div>
     )
 
