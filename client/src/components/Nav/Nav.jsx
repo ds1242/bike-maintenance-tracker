@@ -5,10 +5,10 @@ import { Button } from 'react-bootstrap'
 import './Nav.css';
 
 function Nav() {  
-    const logout = event => {
-        event.preventDefault();
-        Auth.logout();
-    };
+        const logout = event => {
+            event.preventDefault();
+            Auth.logout();
+        };
         function showNav() {
         if(Auth.loggedIn()) {
             return (
