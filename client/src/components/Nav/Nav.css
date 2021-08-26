@@ -1,0 +1,7 @@
+nav {
+    background-color: var(--cinqieme_color);
+}
+
+nav a {
+    color:var(--tertiary_color);
+}

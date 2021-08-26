@@ -5,3 +5,8 @@
   --quartiary_color:#070707;
   --cinqieme_color:#D1345B;
 }
+
+
+body {
+  color: var(--primary_color);
+}
