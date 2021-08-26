@@ -8,19 +8,28 @@ function Nav() {
     function showNav() {
         if(Auth.loggedIn()) {
             return (
-                <li className='navActive'>
-                    <Link to={'/profile'} className='nav-link active'>
-                        <h3>Profile</h3>
-                    </Link>
-                </li>
+                <ul className="navbar-nav">
+                    <li className='navActive'>
+                        <Link to={'/profile'} className='nav-link active'>
+                            <h3>Profile</h3>
+                        </Link>
+                    </li>
+                </ul>
             )
         } else {
             return (
-                <li className='navActive'>
-                    <Link to={'/profile'} className='nav-link active'>
-                        <h3>Profile</h3>
-                    </Link>
-                </li>
+                <ul className="navbar-nav">
+                    <li className='navActive'>
+                        <Link to={'/signup'} className='nav-link active'>
+                            <h3>SignUp</h3>
+                        </Link>
+                    </li>
+                    <li className='navActive'>
+                        <Link to={'/login'} className='nav-link active'>
+                            <h3>Login</h3>
+                        </Link>
+                    </li>
+                </ul>
             )
         }
     }
@@ -30,10 +39,8 @@ function Nav() {
             <div className="container-fluid" >
                 <Link to={'/'} className="navbar-brand">
                     <h1>Bike Maintenance Tracker</h1>
-                </Link>
-                <ul className="navbar-nav">
-                    {showNav()}
-                </ul>
+                </Link>                
+                {showNav()}                
             </div>
         </nav>
     )

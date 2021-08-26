@@ -24,5 +24,6 @@
   "homepage": "https://github.com/ds1242/bike-maintenance-tracker#readme",
   "devDependencies": {
     "concurrently": "^6.2.1"
-  }
+  },
+  "dependencies": {}
 }

@@ -5,8 +5,10 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ApolloClient from 'apollo-boost';
 import './App.css';
 
-import SignUp from '../../pages/SignUp';
-import Nav from '../Nav'
+import SignUp from './pages/SignUp';
+import Login from './pages/Login';
+import Home from './pages/Home';
+import Nav from './components/Nav'
 
 
 const client = new ApolloClient({
@@ -29,7 +31,9 @@ function App() {
           <Router>
             <Nav />
             <Switch>
-              <Route exact path='/' component={SignUp} />
+              <Route exact path='/' component={Home} />
+              <Route exact path='/signup' component={SignUp} />
+              <Route exact path='/login' component={Login} />
             </Switch>
           </Router>
       </div>
