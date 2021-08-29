@@ -1,7 +1,8 @@
 import gql from 'graphql-tag';
 
 export const QUERY_ME = gql`
-    me {
+    query queryMe {
+        me {
         _id
         name
         username
@@ -15,6 +16,7 @@ export const QUERY_ME = gql`
             _id
         }
     }
+}
 `;
 
 export const QUERY_ALL_USERS = gql`
