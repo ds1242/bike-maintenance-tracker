@@ -8,6 +8,7 @@ import './App.css';
 import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import Home from './pages/Home';
+import MyBikes from './pages/MyBikes';
 import Nav from './components/Nav'
 
 
@@ -34,6 +35,7 @@ function App() {
               <Route exact path='/' component={Home} />
               <Route exact path='/signup' component={SignUp} />
               <Route exact path='/login' component={Login} />
+              <Route exact path='/mybikes/:userid' component={MyBikes} />
             </Switch>
           </Router>
       </div>
