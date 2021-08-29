@@ -39,6 +39,7 @@ const typeDefs = gql`
         rearDeraileurModel: String
         rearDeraileurMiles: String
         bikePhoto: String
+        user_id: String
     }
     type Query {
         me: User
@@ -46,6 +47,7 @@ const typeDefs = gql`
         user(_id: ID): User
         bikes: [Bike]
         bike(_id: ID): Bike
+        userBikes(user_id: String): [Bike]
     }
     type Auth {
         token: ID!
