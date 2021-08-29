@@ -1,7 +1,8 @@
 import React from 'react';
 import Auth from '../utils/auth';
 import { Link } from 'react-router-dom';
-
+import { useQuery } from '@apollo/react-hooks';
+import { GET_SINGLE_USER_BIKES, QUERY_ME } from '../utils/queries';
 
 
 const Home = () => {
