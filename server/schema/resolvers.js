@@ -33,7 +33,6 @@ const resolvers = {
         return Bike.findOne({_id})
       },
       userBikes: async(parent, {user_id}) => {
-        console.log(user_id)
         return Bike.find({user_id})
       }
     },
