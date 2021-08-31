@@ -3,6 +3,9 @@ const { Schema, model } = require('mongoose');
 
 const bikeSchema = new Schema(
     {
+        bikeName: {
+            type: String
+        },
         make: {
             type: String,
             required: 'Please enter a make',

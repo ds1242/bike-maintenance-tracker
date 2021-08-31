@@ -40,6 +40,7 @@ const typeDefs = gql`
         rearDeraileurMiles: String
         bikePhoto: String
         user_id: String
+        bikeName: String
     }
     type Query {
         me: User
@@ -57,8 +58,8 @@ const typeDefs = gql`
         login(email: String!, password: String!): Auth
         addUser(name: String!, username: String!, email: String!, userImage: String, userBio: String, password: String!): Auth
         updateUser(name: String, username: String, email: String, userImage: String, userBio: String, password: String): User
-        addBike(make: String!, model: String!, year: String, bikeType: String, forkMake: String, forkModel: String, forkHours: String, cassetteMake: String, cassetteModel: String, cassetteMiles: String, chainringMake: String, chainringModel: String, chainringMiles: String, chainName:String, chainMiles: String, shockMake: String, shockModel: String, shockHours: String, frontDeraileurMake: String, frontDeraileurModel: String, frontDeraileurMiles: String, rearDeraileurMake: String, rearDeraileurModel: String, rearDeraileurMiles: String, bikePhoto: String, user_id: String): Bike
-        updateBike(_id:ID, make: String, model: String, year: String, bikeType: String, forkMake: String, forkModel: String, forkHours: String, cassetteMake: String, cassetteModel: String, cassetteMiles: String, chainringMake: String, chainringModel: String, chainringMiles: String, chainName:String, chainMiles: String, shockMake: String, shockModel: String, shockHours: String, frontDeraileurMake: String, frontDeraileurModel: String, frontDeraileurMiles: String, rearDeraileurMake: String, rearDeraileurModel: String, rearDeraileurMiles: String, bikePhoto: String, user_id: String): Bike
+        addBike(make: String!, model: String!, year: String, bikeType: String, forkMake: String, forkModel: String, forkHours: String, cassetteMake: String, cassetteModel: String, cassetteMiles: String, chainringMake: String, chainringModel: String, chainringMiles: String, chainName:String, chainMiles: String, shockMake: String, shockModel: String, shockHours: String, frontDeraileurMake: String, frontDeraileurModel: String, frontDeraileurMiles: String, rearDeraileurMake: String, rearDeraileurModel: String, rearDeraileurMiles: String, bikePhoto: String, user_id: String, bikeName: String): Bike
+        updateBike(_id:ID, make: String, model: String, year: String, bikeType: String, forkMake: String, forkModel: String, forkHours: String, cassetteMake: String, cassetteModel: String, cassetteMiles: String, chainringMake: String, chainringModel: String, chainringMiles: String, chainName:String, chainMiles: String, shockMake: String, shockModel: String, shockHours: String, frontDeraileurMake: String, frontDeraileurModel: String, frontDeraileurMiles: String, rearDeraileurMake: String, rearDeraileurModel: String, rearDeraileurMiles: String, bikePhoto: String, user_id: String, bikeName: String): Bike
     }
 `;
 
