@@ -35,7 +35,7 @@ function App() {
               <Route exact path='/' component={Home} />
               <Route exact path='/signup' component={SignUp} />
               <Route exact path='/login' component={Login} />
-              <Route exact path='/mybikes/:userid' component={MyBikes} />
+              <Route exact path='/mybikes/:id' component={MyBikes} />
             </Switch>
           </Router>
       </div>
