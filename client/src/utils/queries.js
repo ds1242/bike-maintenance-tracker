@@ -11,6 +11,7 @@ export const QUERY_ME = gql`
         userBio
         bikes {
             _id
+            bikeName
         }
         friends {
             _id
@@ -30,6 +31,7 @@ export const QUERY_ALL_USERS = gql`
             userBio
             bikes {
                 _id
+                bikeName
             }
             friends {
                 _id
@@ -49,6 +51,7 @@ export const QUERY_SINGLE_USER = gql`
         userBio
         bikes {
             _id
+            bikeName
         }
         friends {
             _id
@@ -86,7 +89,9 @@ export const QUERY_SINGLE_BIKE = gql`
         rearDeraileurMake
         rearDeraileurModel
         rearDeraileurMiles
-        bikePhoto    
+        bikePhoto 
+        bikeName 
+        user_id  
         }
     }
 `;
@@ -122,6 +127,7 @@ export const GET_SINGLE_USER_BIKES = gql`
             rearDeraileurMiles
             bikePhoto  
             user_id
+            bikeName
         }
     }
 `;

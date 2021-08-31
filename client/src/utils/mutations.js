@@ -42,63 +42,67 @@ export const CREATE_BIKE = gql`
         $rearDeraileurModel: String, 
         $rearDeraileurMiles: String, 
         $bikePhoto: String, 
-        $user_id: String
+        $user_id: String,
+        $bikeName: String
     ) {
         addBike (
             make: $make,
-        model: $model,
-        year: $year,
-        bikeType: $bikeType,
-        forkMake: $forkMake,
-        forkModel: $forkModel,
-        forkHours: $forkHours,
-        cassetteMake: $cassetteMake,
-        cassetteModel: $cassetteModel,
-        cassetteMiles: $cassetteMiles,
-        chainringMake: $chainringMake,
-        chainringModel: $chainringModel,
-        chainringMiles: $chainringMiles,
-        chainName: $chainName,
-        chainMiles:$chainMiles
-        shockMake: $shockMake,
-        shockModel: $shockModel,
-        shockHours: $shockHours,
-        frontDeraileurMake: $frontDeraileurMake,
-        frontDeraileurModel: $frontDeraileurModel,
-        frontDeraileurMiles: $frontDeraileurMiles,
-        rearDeraileurMake: $rearDeraileurMake,
-        rearDeraileurModel: $rearDeraileurModel,
-        rearDeraileurMiles: $rearDeraileurMiles,
-        bikePhoto: $bikePhoto
-        user_id: $user_id
+            model: $model,
+            year: $year,
+            bikeType: $bikeType,
+            forkMake: $forkMake,
+            forkModel: $forkModel,
+            forkHours: $forkHours,
+            cassetteMake: $cassetteMake,
+            cassetteModel: $cassetteModel,
+            cassetteMiles: $cassetteMiles,
+            chainringMake: $chainringMake,
+            chainringModel: $chainringModel,
+            chainringMiles: $chainringMiles,
+            chainName: $chainName,
+            chainMiles:$chainMiles
+            shockMake: $shockMake,
+            shockModel: $shockModel,
+            shockHours: $shockHours,
+            frontDeraileurMake: $frontDeraileurMake,
+            frontDeraileurModel: $frontDeraileurModel,
+            frontDeraileurMiles: $frontDeraileurMiles,
+            rearDeraileurMake: $rearDeraileurMake,
+            rearDeraileurModel: $rearDeraileurModel,
+            rearDeraileurMiles: $rearDeraileurMiles,
+            bikePhoto: $bikePhoto,
+            user_id: $user_id,
+            bikeName: $bikeName
         ) {
-        _id
-        make
-        model
-        year
-        bikeType
-        forkMake
-        forkModel
-        forkHours
-        cassetteMake
-        cassetteModel
-        cassetteMiles
-        chainringMake
-        chainringModel
-        chainringMiles
-        chainName
-        chainMiles
-        shockMake
-        shockModel
-        shockHours
-        frontDeraileurMake
-        frontDeraileurModel
-        frontDeraileurModel
-        frontDeraileurMiles
-        rearDeraileurMake
-        rearDeraileurModel
-        rearDeraileurMiles
-        bikePhoto
+            _id
+            make
+            model
+            year
+            bikeType
+            forkMake
+            forkModel
+            forkHours
+            cassetteMake
+            cassetteModel
+            cassetteMiles
+            chainringMake
+            chainringModel
+            chainringMiles
+            chainName
+            chainMiles
+            shockMake
+            shockModel
+            shockHours
+            frontDeraileurMake
+            frontDeraileurModel
+            frontDeraileurModel
+            frontDeraileurMiles
+            rearDeraileurMake
+            rearDeraileurModel
+            rearDeraileurMiles
+            bikePhoto
+            bikeName
+            user_id
         }
     }
 `;
@@ -141,6 +145,7 @@ export const UPDATE_USER = gql`
         userBio
         bikes {
             _id
+            bikeName
         }
         friends {
             _id
@@ -177,64 +182,68 @@ export const UPDATE_BIKE = gql`
         $rearDeraileurModel: String, 
         $rearDeraileurMiles: String, 
         $bikePhoto: String, 
-        $user_id: String
+        $user_id: String,
+        $bikeName: String
     ) {
         updateBike (
-        _id: $_id,
+            _id: $_id,
             make: $make,
-        model: $model,
-        year: $year,
-        bikeType: $bikeType,
-        forkMake: $forkMake,
-        forkModel: $forkModel,
-        forkHours: $forkHours,
-        cassetteMake: $cassetteMake,
-        cassetteModel: $cassetteModel,
-        cassetteMiles: $cassetteMiles,
-        chainringMake: $chainringMake,
-        chainringModel: $chainringModel,
-        chainringMiles: $chainringMiles,
-        chainName: $chainName,
-        chainMiles:$chainMiles
-        shockMake: $shockMake,
-        shockModel: $shockModel,
-        shockHours: $shockHours,
-        frontDeraileurMake: $frontDeraileurMake,
-        frontDeraileurModel: $frontDeraileurModel,
-        frontDeraileurMiles: $frontDeraileurMiles,
-        rearDeraileurMake: $rearDeraileurMake,
-        rearDeraileurModel: $rearDeraileurModel,
-        rearDeraileurMiles: $rearDeraileurMiles,
-        bikePhoto: $bikePhoto
-        user_id: $user_id
+            model: $model,
+            year: $year,
+            bikeType: $bikeType,
+            forkMake: $forkMake,
+            forkModel: $forkModel,
+            forkHours: $forkHours,
+            cassetteMake: $cassetteMake,
+            cassetteModel: $cassetteModel,
+            cassetteMiles: $cassetteMiles,
+            chainringMake: $chainringMake,
+            chainringModel: $chainringModel,
+            chainringMiles: $chainringMiles,
+            chainName: $chainName,
+            chainMiles:$chainMiles
+            shockMake: $shockMake,
+            shockModel: $shockModel,
+            shockHours: $shockHours,
+            frontDeraileurMake: $frontDeraileurMake,
+            frontDeraileurModel: $frontDeraileurModel,
+            frontDeraileurMiles: $frontDeraileurMiles,
+            rearDeraileurMake: $rearDeraileurMake,
+            rearDeraileurModel: $rearDeraileurModel,
+            rearDeraileurMiles: $rearDeraileurMiles,
+            bikePhoto: $bikePhoto,
+            user_id: $user_id,
+            bikeName: $bikeName
         ) {
-        _id
-        make
-        model
-        year
-        bikeType
-        forkMake
-        forkModel
-        forkHours
-        cassetteMake
-        cassetteModel
-        cassetteMiles
-        chainringMake
-        chainringModel
-        chainringMiles
-        chainName
-        chainMiles
-        shockMake
-        shockModel
-        shockHours
-        frontDeraileurMake
-        frontDeraileurModel
-        frontDeraileurModel
-        frontDeraileurMiles
-        rearDeraileurMake
-        rearDeraileurModel
-        rearDeraileurMiles
-        bikePhoto
+            _id
+            make
+            model
+            year
+            bikeType
+            forkMake
+            forkModel
+            forkHours
+            cassetteMake
+            cassetteModel
+            cassetteMiles
+            chainringMake
+            chainringModel
+            chainringMiles
+            chainName
+            chainMiles
+            shockMake
+            shockModel
+            shockHours
+            frontDeraileurMake
+            frontDeraileurModel
+            frontDeraileurModel
+            frontDeraileurMiles
+            rearDeraileurMake
+            rearDeraileurModel
+            rearDeraileurMiles
+            bikePhoto
+            bikeName
+            user_id
         }
     }
 `;
