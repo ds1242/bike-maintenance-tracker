@@ -44,7 +44,35 @@ function MyBikes() {
 
     return (
         <div>
-            My Bikes Page
+            <h2>
+                {bikeName}
+            </h2>
+            <p>{make}</p>
+            <p>{model}</p>
+            <p>{year}</p>
+            <p>{bikeType}</p>
+            <p>{shockMake}</p>
+            <p>{shockModel}</p>
+            <p>{shockHours}</p>
+            <p>{forkMake}</p>
+            <p>{forkModel}</p>
+            <p>{forkHours}</p>
+            <p>{frontDeraileurMake}</p>
+            <p>{frontDeraileurModel}</p>
+            <p>{frontDeraileurMiles}</p>
+            <p>{rearDeraileurMake}</p>
+            <p>{rearDeraileurModel}</p>
+            <p>{rearDeraileurMiles}</p>
+            <p>{chainringModel}</p>
+            <p>{chainringMiles}</p>
+            <p>{chainringMake}</p>
+            <p>{chainMiles}</p>
+            <p>{chainName}</p>
+            <p>{cassetteMake}</p>
+            <p>{cassetteModel}</p>
+            <p>{cassetteMiles}</p>
+            <p>{bikePhoto}</p>
+            <p>{user_id}</p>
         </div>
     )
 }
