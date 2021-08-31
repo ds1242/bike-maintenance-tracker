@@ -37,7 +37,9 @@ function MyBikes() {
         cassetteModel,
         cassetteMiles,
         cassetteMake,
-        bikePhoto
+        bikePhoto,
+        bikeName,
+        user_id
     } = data?.bike || {};
 
     return (

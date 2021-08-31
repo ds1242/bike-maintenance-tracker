@@ -24,10 +24,9 @@ const Home = () => {
                    <div>
                    {data.me?.bikes.map(bike => {
                        return(
-                       <Link to={`/mybikes/${bike._id}`} key={bike._id}>
-                    <h3>{bike._id}</h3>
-                    </Link>
-
+                        <Link to={`/mybikes/${bike._id}`} key={bike._id}>
+                            <h3>{bike.bikeName}</h3>
+                        </Link>
                    )})}
                 </div>
                ) : (
