@@ -9,9 +9,6 @@ const Home = () => {
 
     const loggedIn = Auth.loggedIn()
     const { loading, data } = useQuery(QUERY_ME);
-    const meId = data?.me._id || {}
-    console.log(meId)
-    console.log(data?.me.bikes)
 
     if(loading) {
         return(
@@ -23,11 +20,16 @@ const Home = () => {
 
         return (
             <div className="homeContainer">
-               {data?.me.bikes.length ? (
-                <Link to={`/mybikes/:${meId}`} >
-                    <h3>Click here to view your bikes!</h3>
-                </Link>
+               {data.me.bikes.length ? (
+                   <div>
+                   {data.me?.bikes.map(bike => {
+                       return(
+                       <Link to={`/mybikes/${bike._id}`} key={bike._id}>
+                    <h3>{bike._id}</h3>
+                    </Link>
 
+                   )})}
+                </div>
                ) : (
                    <h2>No bikes to view</h2>
                )} 
