@@ -10,7 +10,7 @@ function MyBikes() {
         variables: { _id: bikeId }
     });
 
-    console.log(data);
+    
     const { 
         _id,
         make, 
@@ -42,7 +42,11 @@ function MyBikes() {
         bikeName,
         user_id
     } = data?.bike || {};
-
+    if(bikeType === 'mountain bike') {
+        console.log(true);
+    } else {
+        console.log(false);
+    }
     if(loading) {
         return (
             <h2>Loading...</h2>
@@ -100,6 +104,12 @@ function MyBikes() {
                         <td>{chainModel}</td>
                         <td>{chainMiles}</td>
                     </tr>
+                    <tr>
+                        <th scope="row">Cassette</th>
+                        <td>{cassetteMake}</td>
+                        <td>{cassetteModel}</td>
+                        <td>{cassetteMiles}</td>
+                    </tr>
                 </tbody>
             </table>
             <p>{bikeType}</p>
@@ -107,9 +117,7 @@ function MyBikes() {
             
             
             
-            <p>{cassetteMake}</p>
-            <p>{cassetteModel}</p>
-            <p>{cassetteMiles}</p>
+            
             {/* <img src={bikePhoto} alt="user uploaded bike"/> */}
             <p>{user_id}</p>
         </div>
