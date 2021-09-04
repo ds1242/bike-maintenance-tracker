@@ -50,7 +50,10 @@ const bikeSchema = new Schema(
             type: String,
             default: 0
         },
-        chainName: {
+        chainMake: {
+            type: String
+        },
+        chainModel: {
             type: String
         },
         chainMiles: {

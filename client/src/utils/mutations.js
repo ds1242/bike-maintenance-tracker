@@ -30,7 +30,8 @@ export const CREATE_BIKE = gql`
         $chainringMake: String, 
         $chainringModel: String, 
         $chainringMiles: String, 
-        $chainName:String, 
+        $chainMake:String,
+        $chainModel:String, 
         $chainMiles: String, 
         $shockMake: String, 
         $shockModel: String, 
@@ -59,7 +60,8 @@ export const CREATE_BIKE = gql`
             chainringMake: $chainringMake,
             chainringModel: $chainringModel,
             chainringMiles: $chainringMiles,
-            chainName: $chainName,
+            chainMake: $chainMake,
+            chainModel: $chainModel,
             chainMiles:$chainMiles
             shockMake: $shockMake,
             shockModel: $shockModel,
@@ -88,7 +90,8 @@ export const CREATE_BIKE = gql`
             chainringMake
             chainringModel
             chainringMiles
-            chainName
+            chainMake
+            chainModel
             chainMiles
             shockMake
             shockModel
@@ -170,7 +173,8 @@ export const UPDATE_BIKE = gql`
         $chainringMake: String, 
         $chainringModel: String, 
         $chainringMiles: String, 
-        $chainName:String, 
+        $chainMake:String, 
+        $chainModel: String,
         $chainMiles: String, 
         $shockMake: String, 
         $shockModel: String, 
@@ -200,7 +204,8 @@ export const UPDATE_BIKE = gql`
             chainringMake: $chainringMake,
             chainringModel: $chainringModel,
             chainringMiles: $chainringMiles,
-            chainName: $chainName,
+            chainMake: $chainMake,
+            chainModel: $chainModel,
             chainMiles:$chainMiles
             shockMake: $shockMake,
             shockModel: $shockModel,
@@ -229,7 +234,8 @@ export const UPDATE_BIKE = gql`
             chainringMake
             chainringModel
             chainringMiles
-            chainName
+            chainMake
+            chainModel
             chainMiles
             shockMake
             shockModel

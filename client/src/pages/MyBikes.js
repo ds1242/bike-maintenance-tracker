@@ -32,7 +32,8 @@ function MyBikes() {
         chainringModel,
         chainringMiles,
         chainringMake,
-        chainName,
+        chainMake,
+        chainModel,
         chainMiles,
         cassetteModel,
         cassetteMiles,
@@ -75,28 +76,41 @@ function MyBikes() {
                         <td>{forkModel}</td>
                         <td>{forkHours}</td>
                     </tr>
+                    <tr>
+                        <th scope="row">Front Deraileur</th>
+                        <td>{frontDeraileurMake}</td>
+                        <td>{frontDeraileurModel}</td>
+                        <td>{frontDeraileurMiles}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Rear Deraileur</th>
+                        <td>{rearDeraileurMake}</td>
+                        <td>{rearDeraileurModel}</td>
+                        <td>{rearDeraileurMiles}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Front Chainring(s)</th>
+                        <td>{chainringMake}</td>
+                        <td>{chainringModel}</td>
+                        <td>{chainringMiles}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Chain</th>
+                        <td>{chainMake}</td>
+                        <td>{chainModel}</td>
+                        <td>{chainMiles}</td>
+                    </tr>
                 </tbody>
             </table>
             <p>{bikeType}</p>
-
-            <p>{forkMake}</p>
-            <p>{forkModel}</p>
-            <p>{forkHours}</p>
-            <p>{frontDeraileurMake}</p>
-            <p>{frontDeraileurModel}</p>
-            <p>{frontDeraileurMiles}</p>
-            <p>{rearDeraileurMake}</p>
-            <p>{rearDeraileurModel}</p>
-            <p>{rearDeraileurMiles}</p>
-            <p>{chainringModel}</p>
-            <p>{chainringMiles}</p>
-            <p>{chainringMake}</p>
-            <p>{chainMiles}</p>
-            <p>{chainName}</p>
+            
+            
+            
+            
             <p>{cassetteMake}</p>
             <p>{cassetteModel}</p>
             <p>{cassetteMiles}</p>
-            <img src={bikePhoto} alt="user uploaded bike"/>
+            {/* <img src={bikePhoto} alt="user uploaded bike"/> */}
             <p>{user_id}</p>
         </div>
     )

@@ -77,7 +77,8 @@ export const QUERY_SINGLE_BIKE = gql`
         chainringMake
         chainringModel
         chainringMiles
-        chainName
+        chainMake
+        chainModel
         chainMiles
         shockMake
         shockModel
@@ -113,7 +114,8 @@ export const GET_SINGLE_USER_BIKES = gql`
             chainringMake
             chainringModel
             chainringMiles
-            chainName
+            chainMake
+            chainModel
             chainMiles
             shockMake
             shockModel
