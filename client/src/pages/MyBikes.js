@@ -42,6 +42,12 @@ function MyBikes() {
         user_id
     } = data?.bike || {};
 
+    if(loading) {
+        return (
+            <h2>Loading...</h2>
+        )
+    };
+
     return (
         <div>
             <h2>
@@ -71,7 +77,7 @@ function MyBikes() {
             <p>{cassetteMake}</p>
             <p>{cassetteModel}</p>
             <p>{cassetteMiles}</p>
-            <p>{bikePhoto}</p>
+            <img src={bikePhoto} alt="user uploaded bike"/>
             <p>{user_id}</p>
         </div>
     )
