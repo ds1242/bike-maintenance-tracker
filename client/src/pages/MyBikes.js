@@ -50,16 +50,35 @@ function MyBikes() {
 
     return (
         <div>
-            <h2>
-                {bikeName}
-            </h2>
-            <p>{make}</p>
-            <p>{model}</p>
-            <p>{year}</p>
+            <h3>{make} {model} {year}</h3>
+            <h4> Bike Name: {bikeName} </h4>
+
+            <table className='table'>
+                <thead>
+                    <tr>
+                        <th scope='col'>Part Type</th>
+                        <th scope='col'>Part Make</th>
+                        <th scope='col'>Part Model</th>
+                        <th scope='col'>Miles or Hours</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Shock</th>
+                        <td>{shockMake}</td>
+                        <td>{shockModel}</td>
+                        <td>{shockHours}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Fork</th>
+                        <td>{forkMake}</td>
+                        <td>{forkModel}</td>
+                        <td>{forkHours}</td>
+                    </tr>
+                </tbody>
+            </table>
             <p>{bikeType}</p>
-            <p>{shockMake}</p>
-            <p>{shockModel}</p>
-            <p>{shockHours}</p>
+
             <p>{forkMake}</p>
             <p>{forkModel}</p>
             <p>{forkHours}</p>
