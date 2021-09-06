@@ -36,6 +36,21 @@ function Profile() {
                     </Card>
                 </Col>
             </Row>
+            <Row className="justify-content-md-center">
+                {me.bikes.length ? (
+                    <Col sm={3}>
+                        {me.bikes.map(bike => {
+                            return(
+                               <Card>
+                                   <Card.Title>{bike.bikeName}</Card.Title>
+                               </Card> 
+                            )
+                        })}
+                    </Col>
+                ) : (   
+                    <h2>No bikes to view</h2>
+                )}
+            </Row>
         </Container>
     )
 };
