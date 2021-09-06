@@ -10,7 +10,9 @@ import Login from './pages/Login';
 import Home from './pages/Home';
 import MyBikes from './pages/MyBikes';
 import Profile from './pages/Profile';
-import Nav from './components/Nav'
+import Nav from './components/Nav';
+
+
 
 
 const client = new ApolloClient({
