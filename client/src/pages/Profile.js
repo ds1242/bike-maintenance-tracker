@@ -36,9 +36,9 @@ function Profile() {
                     </Card>
                 </Col>
             </Row>
-            <Row className="justify-content-center">
+            <Row className="justify-content-center g-4" xs={1} md={2}>
                 {me.bikes.length ? (
-                    <Col sm={3}>
+                    <Col>
                         {me.bikes.map(bike => {
                             return(
                                 <Link to={`/mybikes/${bike._id}`} key={bike._id}>
