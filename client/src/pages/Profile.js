@@ -1,6 +1,6 @@
 import React from 'react';
 // import Auth from '../utils/auth';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Card, ListGroup, ListGroupItem, Button, Container, Row, Col } from 'react-bootstrap';
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_ME } from '../utils/queries'
@@ -10,7 +10,7 @@ function Profile() {
     const { loading, data } = useQuery(QUERY_ME);
 
     const me = data?.me || {};
-    console.log(me);
+    // console.log(me);
     if(loading) {
         return <h3>Loading...</h3>
     };
@@ -36,14 +36,18 @@ function Profile() {
                     </Card>
                 </Col>
             </Row>
-            <Row className="justify-content-md-center">
+            <Row className="justify-content-center">
                 {me.bikes.length ? (
                     <Col sm={3}>
                         {me.bikes.map(bike => {
                             return(
-                               <Card>
-                                   <Card.Title>{bike.bikeName}</Card.Title>
-                               </Card> 
+                                <Link to={`/mybikes/${bike._id}`} key={bike._id}>
+                                    <Card key={bike._id}>
+                                        <Card.Body>
+                                                <Card.Title>{bike.bikeName}</Card.Title>
+                                        </Card.Body>
+                                    </Card> 
+                                </Link>
                             )
                         })}
                     </Col>
