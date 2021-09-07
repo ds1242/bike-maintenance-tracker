@@ -38,6 +38,9 @@ function Profile() {
                     </Card>
                 </Col>
             </Row>
+            <Row className="justify-content-center">
+                <h3>My Bikes: </h3>
+            </Row>
             <Row className="justify-content-center g-4" xs={1} md={2} id="bike-cards">
                 {me.bikes.length ? (
                     <Col >
