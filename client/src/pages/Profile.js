@@ -31,17 +31,19 @@ function Profile() {
                             <ListGroupItem>Email: {me.email}</ListGroupItem>
                         </ListGroup>
                         <Card.Footer>
-                            <Button variant="primary">Edit Profile</Button>
+                            <Link to='/editprofile'>
+                                <Button variant="primary">Edit Profile</Button>
+                            </Link>
                         </Card.Footer>
                     </Card>
                 </Col>
             </Row>
-            <Row className="justify-content-center g-4" xs={1} md={2}>
+            <Row className="justify-content-center g-4" xs={1} md={2} id="">
                 {me.bikes.length ? (
-                    <Col>
+                    <Col >
                         {me.bikes.map(bike => {
                             return(
-                                <Link to={`/mybikes/${bike._id}`} key={bike._id}>
+                                <Link to={`/mybikes/${bike._id}`} key={bike._id} xs lg="3">
                                     <Card key={bike._id}>
                                         <Card.Body>
                                                 <Card.Title>{bike.bikeName}</Card.Title>
