@@ -38,13 +38,13 @@ function Profile() {
                     </Card>
                 </Col>
             </Row>
-            <Row className="justify-content-center g-4" xs={1} md={2} id="">
+            <Row className="justify-content-center g-4" xs={1} md={2} id="bike-cards">
                 {me.bikes.length ? (
                     <Col >
                         {me.bikes.map(bike => {
                             return(
-                                <Link to={`/mybikes/${bike._id}`} key={bike._id} xs lg="3">
-                                    <Card key={bike._id}>
+                                <Link to={`/mybikes/${bike._id}`} key={bike._id} >
+                                    <Card key={bike._id} xs={3} lg={8}>
                                         <Card.Body>
                                                 <Card.Title>{bike.bikeName}</Card.Title>
                                         </Card.Body>
