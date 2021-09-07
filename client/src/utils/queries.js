@@ -12,6 +12,7 @@ export const QUERY_ME = gql`
         bikes {
             _id
             bikeName
+            bikePhoto
         }
         friends {
             _id
@@ -32,6 +33,7 @@ export const QUERY_ALL_USERS = gql`
             bikes {
                 _id
                 bikeName
+                bikePhoto
             }
             friends {
                 _id
@@ -52,6 +54,7 @@ export const QUERY_SINGLE_USER = gql`
         bikes {
             _id
             bikeName
+            bikePhoto
         }
         friends {
             _id
