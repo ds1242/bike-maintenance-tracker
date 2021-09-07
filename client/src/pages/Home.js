@@ -12,7 +12,7 @@ const Home = () => {
 
     if(loading) {
         return(
-            <div>Loading...</div>
+            <h2>Loading...</h2>
         )
     }
     
