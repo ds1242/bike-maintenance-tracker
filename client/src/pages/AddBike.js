@@ -64,7 +64,25 @@ const AddBike = () => {
     })
 
     return (
-        <h2>Add Bike</h2>
+        <Container fluid="md">
+            <h2>Please Enter Your Bike's Information:</h2>
+            <Form>
+                <Row className="mb-3">
+                    <Form.Group as={Col}>
+                        <Form.Label>Make:</Form.Label>
+                        <Form.Control type="text" name="make" value={bikeData.make} onChange={handleChange}/>
+                    </Form.Group>
+                    <Form.Group as={Col}>
+                        <Form.Label>Model:</Form.Label>
+                        <Form.Control type="text" name="model" value={bikeData.model} onChange={handleChange} />
+                    </Form.Group>
+                    <Form.Group as={Col}>
+                        <Form.Label>Year:</Form.Label>
+                        <Form.Control type="year" name="year" id="datepicker" autoComplete="off" value={bikeData.year} onChange={handleChange}/>
+                    </Form.Group>
+                </Row>
+            </Form>
+        </Container>
     )
 
 }
