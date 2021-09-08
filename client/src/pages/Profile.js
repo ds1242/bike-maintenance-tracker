@@ -43,11 +43,12 @@ function Profile() {
             </Row>
             <Row className="justify-content-center g-4" xs={1} md={2} id="bike-cards">
                 {me.bikes.length ? (
-                    <Col >
+                    <Col lg={3}>
                         {me.bikes.map(bike => {
                             return(
                                 <Link to={`/mybikes/${bike._id}`} key={bike._id} >
                                     <Card key={bike._id} xs={3} lg={8}>
+                                        <Card.Img src={bike.bikePhoto} />
                                         <Card.Body>
                                                 <Card.Title>{bike.bikeName}</Card.Title>
                                         </Card.Body>

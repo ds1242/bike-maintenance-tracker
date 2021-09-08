@@ -3,6 +3,8 @@ import { useQuery } from '@apollo/react-hooks';
 import { useParams } from 'react-router-dom'
 import { QUERY_SINGLE_BIKE } from '../utils/queries';
 // import Auth from '../utils/auth';
+import { Link } from 'react-router-dom'
+import { Button } from 'react-bootstrap';
 
 function MyBikes() {
     const { id: bikeId } = useParams();
@@ -57,6 +59,7 @@ function MyBikes() {
         <div>
             <h3>{make} {model} {year}</h3>
             <h4> Bike Name: {bikeName} </h4>
+            
 
             <table className='table'>
                 <thead>
@@ -120,6 +123,9 @@ function MyBikes() {
             
             {/* <img src={bikePhoto} alt="user uploaded bike"/> */}
             <p>{user_id}</p>
+            <Link to={`/`}>
+                <Button>Back to Home</Button>
+            </Link>
         </div>
     )
 }
