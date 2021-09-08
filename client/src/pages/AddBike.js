@@ -66,7 +66,7 @@ const AddBike = () => {
     return (
         <Container fluid="md">
             <h2>Please Enter Your Bike's Information:</h2>
-            <Form>
+            <Form onSubmit={handleFormSubmit}>
                 <Row className="mb-3">
                     <Form.Group as={Col}>
                         <Form.Label>Bike Make:</Form.Label>
