@@ -3,7 +3,7 @@ import Auth from '../utils/auth';
 import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_ME } from '../utils/queries';
-import { Card, Col, Row } from 'react-bootstrap';
+import { Card, Col, Row, Container } from 'react-bootstrap';
 
 
 const Home = () => {
@@ -20,17 +20,16 @@ const Home = () => {
     if(loggedIn) {
 
         return (
-            <div className="homeContainer">
+            <Container fluid='md' className="homeContainer">
                {data.me.bikes.length ? (
-                   <Row>
+                   <Row className="justify-content-md-center">
                    {data.me?.bikes.map(bike => {
                        return(
                            <Col md={3}>
                             <Link to={`/mybikes/${bike._id}`} key={bike._id}>
                                 <Card>
-                                    <Card.Img variant="top" src={bike.bikeImage} />
-                                <h3>{bike.bikeName}</h3>
-
+                                    <Card.Img variant="top" src={bike.bikePhoto} />
+                                    <Card.Title>{bike.bikeName}</Card.Title>
                                 </Card>
                             </Link>
                            </Col>
@@ -39,7 +38,7 @@ const Home = () => {
                ) : (
                    <h2>No bikes to view</h2>
                )} 
-            </div>
+            </Container>
         )
     } else {
     return (
