@@ -3,6 +3,7 @@ import Auth from '../utils/auth';
 import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_ME } from '../utils/queries';
+import { Card, Col, Row } from 'react-bootstrap';
 
 
 const Home = () => {
@@ -21,14 +22,20 @@ const Home = () => {
         return (
             <div className="homeContainer">
                {data.me.bikes.length ? (
-                   <div>
+                   <Row>
                    {data.me?.bikes.map(bike => {
                        return(
-                        <Link to={`/mybikes/${bike._id}`} key={bike._id}>
-                            <h3>{bike.bikeName}</h3>
-                        </Link>
+                           <Col md={3}>
+                            <Link to={`/mybikes/${bike._id}`} key={bike._id}>
+                                <Card>
+                                    <Card.Img variant="top" src={bike.bikeImage} />
+                                <h3>{bike.bikeName}</h3>
+
+                                </Card>
+                            </Link>
+                           </Col>
                    )})}
-                </div>
+                </Row>
                ) : (
                    <h2>No bikes to view</h2>
                )} 
