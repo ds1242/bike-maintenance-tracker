@@ -134,15 +134,15 @@ const AddBike = () => {
                     <h3>Shock</h3>
                     <Form.Group as={Col}>
                         <Form.Label>Make:</Form.Label>
-                        <Form.Control type="text" name="make" value={bikeData.forkMake} onChange={handleChange}/>
+                        <Form.Control type="text" name="shockMake" value={bikeData.shockMake} onChange={handleChange}/>
                     </Form.Group>
                     <Form.Group as={Col}>
                         <Form.Label>Model:</Form.Label>
-                        <Form.Control type="text" name="model" value={bikeData.forkModel} onChange={handleChange} />
+                        <Form.Control type="text" name="shockModel" value={bikeData.shockModel} onChange={handleChange} />
                     </Form.Group>
                     <Form.Group as={Col}>
-                        <Form.Label>Current Hours (since last lower leg service):</Form.Label>
-                        <Form.Control type="year" name="year" id="datepicker" autoComplete="off" value={bikeData.forkHours} onChange={handleChange}/>
+                        <Form.Label>Current Hours (since last sleeve service):</Form.Label>
+                        <Form.Control type="text" name="shockHours" value={bikeData.shockHours} onChange={handleChange}/>
                     </Form.Group>
                 </Row>
             </Form>
