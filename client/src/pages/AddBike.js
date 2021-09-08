@@ -69,16 +69,59 @@ const AddBike = () => {
             <Form>
                 <Row className="mb-3">
                     <Form.Group as={Col}>
-                        <Form.Label>Make:</Form.Label>
+                        <Form.Label>Bike Make:</Form.Label>
                         <Form.Control type="text" name="make" value={bikeData.make} onChange={handleChange}/>
                     </Form.Group>
                     <Form.Group as={Col}>
-                        <Form.Label>Model:</Form.Label>
+                        <Form.Label>Bike Model:</Form.Label>
                         <Form.Control type="text" name="model" value={bikeData.model} onChange={handleChange} />
                     </Form.Group>
                     <Form.Group as={Col}>
-                        <Form.Label>Year:</Form.Label>
-                        <Form.Control type="year" name="year" id="datepicker" autoComplete="off" value={bikeData.year} onChange={handleChange}/>
+                        <Form.Label>Bike Year:</Form.Label>
+                        <Form.Select name="year" value={bikeData.year} onChange={handleChange}>
+                            <option>Select a Year</option>
+                            <option value='2021'>2021</option>
+                            <option value='2020'>2020</option>
+                            <option value='2019'>2019</option>
+                            <option value='2018'>2018</option>
+                            <option value='2017'>2017</option>
+                            <option value='2016'>2016</option>
+                            <option value='2015'>2015</option>
+                            <option value='2014'>2014</option>
+                            <option value='2013'>2013</option>
+                            <option value='2012'>2012</option>
+                            <option value='2011'>2011</option>
+                        </Form.Select>
+                    </Form.Group>
+                </Row>
+                <Row className="mb-3">
+                    <h3>Fork</h3>
+                    <Form.Group as={Col}>
+                        <Form.Label>Make:</Form.Label>
+                        <Form.Control type="text" name="forkMake" value={bikeData.forkMake} onChange={handleChange}/>
+                    </Form.Group>
+                    <Form.Group as={Col}>
+                        <Form.Label>Model:</Form.Label>
+                        <Form.Control type="text" name="forkModel" value={bikeData.forkModel} onChange={handleChange} />
+                    </Form.Group>
+                    <Form.Group as={Col}>
+                        <Form.Label>Current Hours (since last lower leg service):</Form.Label>
+                        <Form.Control type="text" name="forkHours" value={bikeData.forkHours} onChange={handleChange}/>
+                    </Form.Group>
+                </Row>
+                <Row className="mb-3">
+                    <h3>Shock</h3>
+                    <Form.Group as={Col}>
+                        <Form.Label>Make:</Form.Label>
+                        <Form.Control type="text" name="make" value={bikeData.forkMake} onChange={handleChange}/>
+                    </Form.Group>
+                    <Form.Group as={Col}>
+                        <Form.Label>Model:</Form.Label>
+                        <Form.Control type="text" name="model" value={bikeData.forkModel} onChange={handleChange} />
+                    </Form.Group>
+                    <Form.Group as={Col}>
+                        <Form.Label>Current Hours (since last lower leg service):</Form.Label>
+                        <Form.Control type="year" name="year" id="datepicker" autoComplete="off" value={bikeData.forkHours} onChange={handleChange}/>
                     </Form.Group>
                 </Row>
             </Form>
