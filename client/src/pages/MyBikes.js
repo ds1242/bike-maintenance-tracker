@@ -44,19 +44,16 @@ function MyBikes() {
         bikeName,
         user_id
     } = data?.bike || {};
-    if(bikeType === 'mountain bike') {
-        console.log(true);
-    } else {
-        console.log(false);
-    }
+    
     if(loading) {
         return (
             <h2>Loading...</h2>
         )
     };
+    if(bikeType === 'mountain bike') {
 
-    return (
-        <div>
+        return (
+            <div>
             <h3>{make} {model} {year}</h3>
             <h4> Bike Name: {bikeName} </h4>
             
@@ -128,6 +125,69 @@ function MyBikes() {
             </Link>
         </div>
     )
+    } else if(bikeType === 'road bike') {
+        return (
+                <div>
+                <h3>{make} {model} {year}</h3>
+                <h4> Bike Name: {bikeName} </h4>
+                
+
+                <table className='table'>
+                    <thead>
+                        <tr>
+                            <th scope='col'>Part Type</th>
+                            <th scope='col'>Part Make</th>
+                            <th scope='col'>Part Model</th>
+                            <th scope='col'>Miles or Hours</th>
+                        </tr>
+                    </thead>
+                    <tbody>                        
+                        <tr>
+                            <th scope="row">Front Deraileur</th>
+                            <td>{frontDeraileurMake}</td>
+                            <td>{frontDeraileurModel}</td>
+                            <td>{frontDeraileurMiles}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Rear Deraileur</th>
+                            <td>{rearDeraileurMake}</td>
+                            <td>{rearDeraileurModel}</td>
+                            <td>{rearDeraileurMiles}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Front Chainring(s)</th>
+                            <td>{chainringMake}</td>
+                            <td>{chainringModel}</td>
+                            <td>{chainringMiles}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Chain</th>
+                            <td>{chainMake}</td>
+                            <td>{chainModel}</td>
+                            <td>{chainMiles}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Cassette</th>
+                            <td>{cassetteMake}</td>
+                            <td>{cassetteModel}</td>
+                            <td>{cassetteMiles}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>{bikeType}</p>
+                
+                
+                
+                
+                
+                {/* <img src={bikePhoto} alt="user uploaded bike"/> */}
+                <p>{user_id}</p>
+                <Link to={`/`}>
+                    <Button>Back to Home</Button>
+                </Link>
+            </div>
+        )
+    }
 }
 
 export default MyBikes;
