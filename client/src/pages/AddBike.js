@@ -69,15 +69,15 @@ const AddBike = () => {
             <Form onSubmit={handleFormSubmit}>
                 <Row className="mb-3">
                     <Form.Group as={Col}>
-                        <Form.Label>Bike Make:</Form.Label>
+                        <Form.Label>Bike Frame Make:</Form.Label>
                         <Form.Control type="text" name="make" value={bikeData.make} onChange={handleChange}/>
                     </Form.Group>
                     <Form.Group as={Col}>
-                        <Form.Label>Bike Model:</Form.Label>
+                        <Form.Label>Bike Frame Model:</Form.Label>
                         <Form.Control type="text" name="model" value={bikeData.model} onChange={handleChange} />
                     </Form.Group>
                     <Form.Group as={Col}>
-                        <Form.Label>Bike Year:</Form.Label>
+                        <Form.Label>Bike Frame Year:</Form.Label>
                         <Form.Select name="year" value={bikeData.year} onChange={handleChange}>
                             <option>Select a Year</option>
                             <option value='2021'>2021</option>
@@ -112,6 +112,16 @@ const AddBike = () => {
                             <option value='1992'>1992</option>
                             <option value='1991'>1991</option>
                             <option value='1990'>1990</option>
+                        </Form.Select>
+                    </Form.Group>
+                </Row>
+                <Row className="mb-3">
+                    <Form.Group as={Col}>
+                        <Form.Label>Bicycle Type:</Form.Label>
+                        <Form.Select name='bikeType' value={bikeData.bikeType} onChange={handleChange}>
+                            <option>Select a bike type:</option>
+                            <option value="Mountain Bike">Mountain Bike</option>
+                            <option value="Road Bike">Road Bike</option>
                         </Form.Select>
                     </Form.Group>
                 </Row>
