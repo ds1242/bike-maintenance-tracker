@@ -52,6 +52,34 @@ const AddBike = () => {
                     ...bikeData
                 }
             });
+            setBikeData({make: '', 
+            model: '', 
+            year: '', 
+            bikeType: '', 
+            shockMake: '', 
+            shockModel: '', 
+            shockHours: '', 
+            rearDeraileurModel: '', 
+            rearDeraileurMake: '', 
+            rearDeraileurMiles: '',
+            frontDeraileurModel: '',
+            frontDeraileurMake: '',
+            frontDeraileurMiles: '',
+            forkMake: '',
+            forkModel: '',
+            forkHours: '',
+            chainringModel: '',
+            chainringMiles: '',
+            chainringMake: '',
+            chainMake: '',
+            chainModel: '',
+            chainMiles: '',
+            cassetteModel: '',
+            cassetteMiles: '',
+            cassetteMake: '',
+            bikePhoto: '',
+            bikeName: ''});
+            console.log("bike added!")
         } catch (e) {
             console.error(e);
         }
@@ -128,6 +156,10 @@ const AddBike = () => {
                             <option value="Road Bike">Road Bike</option>
                         </Form.Select>
                     </Form.Group>
+                    <Form.Group as={Col}>
+                        <Form.Label>Bike Image Link</Form.Label>
+                        <Form.Control type="text" name="bikePhoto" value={bikeData.bikePhoto} onChange={handleChange} />  
+                    </Form.Group>
                 </Row>
                 <Row className="mb-3">
                     <h3>Fork</h3>
@@ -160,7 +192,7 @@ const AddBike = () => {
                     </Form.Group>
                 </Row>
                 <Row className="mb-3">
-                    <h3>Front Deraileur</h3>
+                    <h3>Front Derailleur</h3>
                     <Form.Group as={Col}>
                         <Form.Label>Make:</Form.Label>
                         <Form.Control type="text" name="frontDeraileurMake" value={bikeData.frontDeraileurMake} onChange={handleChange}/>
@@ -173,6 +205,71 @@ const AddBike = () => {
                         <Form.Label>Current Number of Miles Used:</Form.Label>
                         <Form.Control type="text" name="frontDeraileurMiles" value={bikeData.frontDeraileurMiles} onChange={handleChange}/>
                     </Form.Group>
+                </Row>
+                <Row className="mb-3">
+                    <h3>Rear Derailleur</h3>
+                    <Form.Group as={Col}>
+                        <Form.Label>Make:</Form.Label>
+                        <Form.Control type="text" name="rearDeraileurMake" value={bikeData.rearDeraileurMake} onChange={handleChange}/>
+                    </Form.Group>
+                    <Form.Group as={Col}>
+                        <Form.Label>Model:</Form.Label>
+                        <Form.Control type="text" name="rearDeraileurModel" value={bikeData.rearDeraileurModel} onChange={handleChange} />
+                    </Form.Group>
+                    <Form.Group as={Col}>
+                        <Form.Label>Current Number of Miles Used:</Form.Label>
+                        <Form.Control type="text" name="rearDeraileurMiles" value={bikeData.rearDeraileurMiles} onChange={handleChange}/>
+                    </Form.Group>
+                </Row>
+                <Row className="mb-3">
+                    <h3>Front Chainring</h3>
+                    <Form.Group as={Col}>
+                        <Form.Label>Make:</Form.Label>
+                        <Form.Control type="text" name="chainringMake" value={bikeData.chainringMake} onChange={handleChange}/>
+                    </Form.Group>
+                    <Form.Group as={Col}>
+                        <Form.Label>Model:</Form.Label>
+                        <Form.Control type="text" name="chainringModel" value={bikeData.chainringModel} onChange={handleChange} />
+                    </Form.Group>
+                    <Form.Group as={Col}>
+                        <Form.Label>Current Number of Miles Used:</Form.Label>
+                        <Form.Control type="text" name="chainringMiles" value={bikeData.chainringMiles} onChange={handleChange}/>
+                    </Form.Group>
+                </Row>
+                <Row className="mb-3">
+                    <h3>Cassette</h3>
+                    <Form.Group as={Col}>
+                        <Form.Label>Make:</Form.Label>
+                        <Form.Control type="text" name="cassetteMake" value={bikeData.cassetteMake} onChange={handleChange}/>
+                    </Form.Group>
+                    <Form.Group as={Col}>
+                        <Form.Label>Model:</Form.Label>
+                        <Form.Control type="text" name="cassetteModel" value={bikeData.cassetteModel} onChange={handleChange} />
+                    </Form.Group>
+                    <Form.Group as={Col}>
+                        <Form.Label>Current Number of Miles Used:</Form.Label>
+                        <Form.Control type="text" name="cassetteMiles" value={bikeData.cassetteMiles} onChange={handleChange}/>
+                    </Form.Group>
+                </Row>
+                <Row className="mb-3">
+                    <h3>Chain</h3>
+                    <Form.Group as={Col}>
+                        <Form.Label>Make:</Form.Label>
+                        <Form.Control type="text" name="chainMake" value={bikeData.chainMake} onChange={handleChange}/>
+                    </Form.Group>
+                    <Form.Group as={Col}>
+                        <Form.Label>Model:</Form.Label>
+                        <Form.Control type="text" name="chainModel" value={bikeData.chainModel} onChange={handleChange} />
+                    </Form.Group>
+                    <Form.Group as={Col}>
+                        <Form.Label>Current Number of Miles Used:</Form.Label>
+                        <Form.Control type="text" name="chainMiles" value={bikeData.chainMiles} onChange={handleChange} placeholder="Defaults to 0"/>
+                    </Form.Group>
+                </Row>
+                <Row>
+                    <Col>
+                        <Button variant="primary" type="submit">Add Bike!</Button>
+                    </Col>
                 </Row>
             </Form>
         </Container>

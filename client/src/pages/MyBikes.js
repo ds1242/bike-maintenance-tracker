@@ -50,7 +50,7 @@ function MyBikes() {
             <h2>Loading...</h2>
         )
     };
-    if(bikeType === 'mountain bike') {
+    if(bikeType === 'Mountain Bike') {
 
         return (
             <div>
@@ -125,7 +125,7 @@ function MyBikes() {
             </Link>
         </div>
     )
-    } else if(bikeType === 'road bike') {
+    } else if(bikeType === 'Road Bike') {
         return (
                 <div>
                 <h3>{make} {model} {year}</h3>
