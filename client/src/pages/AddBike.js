@@ -117,6 +117,10 @@ const AddBike = () => {
                 </Row>
                 <Row className="mb-3">
                     <Form.Group as={Col}>
+                        <Form.Label>Bike Name:</Form.Label>
+                        <Form.Control type="text" name="bikeName" value={bikeData.bikeName} onChange={handleChange}/>
+                    </Form.Group>
+                    <Form.Group as={Col}>
                         <Form.Label>Bicycle Type:</Form.Label>
                         <Form.Select name='bikeType' value={bikeData.bikeType} onChange={handleChange}>
                             <option>Select a bike type:</option>
@@ -153,6 +157,21 @@ const AddBike = () => {
                     <Form.Group as={Col}>
                         <Form.Label>Current Hours (since last sleeve service):</Form.Label>
                         <Form.Control type="text" name="shockHours" value={bikeData.shockHours} onChange={handleChange}/>
+                    </Form.Group>
+                </Row>
+                <Row className="mb-3">
+                    <h3>Front Deraileur</h3>
+                    <Form.Group as={Col}>
+                        <Form.Label>Make:</Form.Label>
+                        <Form.Control type="text" name="frontDeraileurMake" value={bikeData.frontDeraileurMake} onChange={handleChange}/>
+                    </Form.Group>
+                    <Form.Group as={Col}>
+                        <Form.Label>Model:</Form.Label>
+                        <Form.Control type="text" name="frontDeraileurModel" value={bikeData.frontDeraileurModel} onChange={handleChange} />
+                    </Form.Group>
+                    <Form.Group as={Col}>
+                        <Form.Label>Current Number of Miles Used:</Form.Label>
+                        <Form.Control type="text" name="frontDeraileurMiles" value={bikeData.frontDeraileurMiles} onChange={handleChange}/>
                     </Form.Group>
                 </Row>
             </Form>
