@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import { QUERY_SINGLE_BIKE } from '../utils/queries';
 // import Auth from '../utils/auth';
 import { Link } from 'react-router-dom'
-import { Button, Col, Row } from 'react-bootstrap';
+import { Button, Col, Container, Row } from 'react-bootstrap';
 import MyModal from '../components/Modal';
 
 function MyBikes() {
@@ -58,7 +58,7 @@ function MyBikes() {
 
 
         return (
-            <div>
+            <Container fluid>
             <h3>{make} {model} {year}</h3>
             <h4> Bike Name: {bikeName} </h4>
             <img src={bikePhoto} />
@@ -138,7 +138,7 @@ function MyBikes() {
                 <Button variant="secondary" onClick={handleShow}>Add Ride</Button>
             </Col>
             </Row>
-        </div>
+        </Container>
     )
     } else if(bikeType === 'Road Bike') {
         return (

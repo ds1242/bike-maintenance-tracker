@@ -8,6 +8,9 @@ function MyModal (props) {
     return(
         <Modal show={show} centered>
             <Modal.Title>Modal Opens</Modal.Title>
+            <Modal.Footer>
+                <Button onClick={onClose}>Close</Button>
+            </Modal.Footer>
         </Modal>
 
     )
