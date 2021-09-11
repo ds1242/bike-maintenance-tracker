@@ -61,7 +61,7 @@ function MyBikes() {
             <Container fluid>
             <h3>{make} {model} {year}</h3>
             <h4> Bike Name: {bikeName} </h4>
-            <img src={bikePhoto} />
+            <img src={bikePhoto} alt="User's uploaded bike" />
             
             {handleShow && <MyModal 
                 show={show}
@@ -146,7 +146,7 @@ function MyBikes() {
                 <h3>{make} {model} {year}</h3>
                 <h4> Bike Name: {bikeName} </h4>
                 
-                <img src={bikePhoto} />
+                <img src={bikePhoto} alt="User's uploaded bike" />
                 <table className='table'>
                     <thead>
                         <tr>
