@@ -56,6 +56,7 @@ function MyBikes() {
             <div>
             <h3>{make} {model} {year}</h3>
             <h4> Bike Name: {bikeName} </h4>
+            <img src={bikePhoto} />
             
 
             <table className='table'>
@@ -131,7 +132,7 @@ function MyBikes() {
                 <h3>{make} {model} {year}</h3>
                 <h4> Bike Name: {bikeName} </h4>
                 
-
+                <img src={bikePhoto} />
                 <table className='table'>
                     <thead>
                         <tr>
