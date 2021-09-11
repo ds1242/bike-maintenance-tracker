@@ -10,14 +10,20 @@ function MyModal (props) {
             <Modal.Title>Add Ride Details</Modal.Title>
             <Modal.Body>
                 <form>
-                    <Col>
-                        <h5>Ride Time:</h5>
-                        <input type="text" placeholder="Hours" />
-                    </Col>
+                    <Row>
+                        <Col>
+                            <h5>Ride Time:</h5>
+                            <input type="text" placeholder="Hours" />
+                        </Col>
+                        <Col>
+                            <h5>Ride Distance:</h5>
+                            <input type="text" placeholder="Miles" />
+                        </Col>
+                    </Row>
                 </form>
             </Modal.Body>
             <Modal.Footer>
-                <Button onClick={onClose}>Close</Button>
+                <Button onClick={onClose}>Add Ride</Button>
             </Modal.Footer>
         </Modal>
 
