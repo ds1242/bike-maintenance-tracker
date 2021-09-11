@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { useParams } from 'react-router-dom'
 import { QUERY_SINGLE_BIKE } from '../utils/queries';
 // import Auth from '../utils/auth';
 import { Link } from 'react-router-dom'
-import { Button } from 'react-bootstrap';
+import { Button, Col, Row } from 'react-bootstrap';
+import MyModal from '../components/Modal';
 
 function MyBikes() {
     const { id: bikeId } = useParams();
@@ -44,13 +45,17 @@ function MyBikes() {
         bikeName,
         user_id
     } = data?.bike || {};
+    const [show, setShow] = useState(false);
+        const handleShow = () => setShow(true);
+        const handleClose = () => setShow(false);
     
     if(loading) {
         return (
             <h2>Loading...</h2>
         )
     };
-    if(bikeType === 'Mountain Bike') {
+    if(bikeType === 'Mountain Bike') {       
+
 
         return (
             <div>
@@ -58,7 +63,10 @@ function MyBikes() {
             <h4> Bike Name: {bikeName} </h4>
             <img src={bikePhoto} />
             
-
+            {handleShow && <MyModal 
+                show={show}
+                onClose={handleClose}
+            />}
             <table className='table'>
                 <thead>
                     <tr>
@@ -121,9 +129,15 @@ function MyBikes() {
             
             {/* <img src={bikePhoto} alt="user uploaded bike"/> */}
             <p>{user_id}</p>
+            <Row>
+
             <Link to={`/`}>
                 <Button>Back to Home</Button>
             </Link>
+            <Col>
+                <Button variant="secondary" onClick={handleShow}>Add Ride</Button>
+            </Col>
+            </Row>
         </div>
     )
     } else if(bikeType === 'Road Bike') {

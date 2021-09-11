@@ -5,6 +5,7 @@ import { Form, Button, Container, Col, Row } from 'react-bootstrap';
 import { CREATE_BIKE } from '../utils/mutations';
 import { QUERY_ME } from '../utils/queries'
 
+
 const AddBike = () => {
 
     const [bikeData, setBikeData] = useState({
@@ -90,7 +91,8 @@ const AddBike = () => {
         refetchQueries: [
             { query: QUERY_ME}
         ]
-    })
+    });
+
 
     return (
         <Container fluid="md">
