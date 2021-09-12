@@ -65,7 +65,14 @@ function MyBikes() {
                 
                 {handleShow && <MyModal 
                     show={show}
+                    forkHours={forkHours}
+                    shockHours={shockHours}
+                    cassetteMiles={cassetteMiles}
+                    chainMiles= {chainMiles}
+                    frontDeraileurMiles={frontDeraileurMiles}
+                    rearDeraileurMiles={rearDeraileurMiles}
                     onClose={handleClose}
+
                 />}
                 <table className='table'>
                     <thead>
