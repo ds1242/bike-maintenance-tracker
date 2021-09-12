@@ -1,9 +1,25 @@
 import React from 'react';
-import { Modal, Button, Form, Row, Col } from 'react-bootstrap'
+import { Modal, Button, Form, Row, Col } from 'react-bootstrap';
+import { useQuery, useMutation } from '@apollo/react-hooks';
+import { UPDATE_BIKE } from '../../utils/mutations';
 
 function MyModal (props) {
 
-    const {show, onClose} = props;
+    const {show, onClose, shockHours, forkHours, cassetteMiles, chainMiles, chainringMiles, frontDeraileurMiles, rearDeraileurMiles, _id} = props;
+
+    const [bikeData, setBikeData] = useState({
+        shockHours: shockHours,
+        forkhours: forkHours,
+        cassetteMiles: cassetteMiles,
+        chainMiles: chainMiles,
+        chainringMiles: chainringMiles,
+        frontDeraileurMiles: frontDeraileurMiles, 
+        rearDeraileurMiles: rearDeraileurMiles
+    });
+
+    const [updateBike] = useMutation(UPDATE_BIKE, {
+        variables: { _id: _id }
+    });
 
     return(
         <Modal show={show} centered>

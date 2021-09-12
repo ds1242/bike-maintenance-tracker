@@ -45,9 +45,10 @@ function MyBikes() {
         bikeName,
         user_id
     } = data?.bike || {};
+
     const [show, setShow] = useState(false);
-        const handleShow = () => setShow(true);
-        const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+    const handleClose = () => setShow(false);
     
     if(loading) {
         return (
@@ -64,13 +65,16 @@ function MyBikes() {
                 <img src={bikePhoto} alt="User's uploaded bike" />
                 
                 {handleShow && <MyModal 
+                    key={_id}
                     show={show}
+                    _id={_id}
                     forkHours={forkHours}
                     shockHours={shockHours}
                     cassetteMiles={cassetteMiles}
                     chainMiles= {chainMiles}
                     frontDeraileurMiles={frontDeraileurMiles}
                     rearDeraileurMiles={rearDeraileurMiles}
+                    chainringMiles={chainringMiles}
                     onClose={handleClose}
 
                 />}
