@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Modal, Button, Form, Row, Col } from 'react-bootstrap';
 import { useQuery, useMutation } from '@apollo/react-hooks';
 import { UPDATE_BIKE } from '../../utils/mutations';
+import { QUERY_SINGLE_BIKE } from '../../utils/queries';
 
 function MyModal (props) {
 
@@ -18,7 +19,10 @@ function MyModal (props) {
     });
 
     const [updateBike] = useMutation(UPDATE_BIKE, {
-        variables: { _id: _id }
+        variables: { _id: _id },
+        refetchQueries: [
+            { query: QUERY_SINGLE_BIKE }
+        ]
     });
 
     const handleFormSubmit = async event => {
@@ -44,10 +48,11 @@ function MyModal (props) {
             frontDeraileurMiles: newFrontDeraileurMiles.toString(),
             rearDeraileurMiles: newRearDeraileurMiles.toString()
         })
-
+    
         try {
             await updateBike({
                 variables: {
+                    _id,
                     ...bikeData
                 }
             });
@@ -60,7 +65,7 @@ function MyModal (props) {
 
     return(
         <Modal show={show} centered>
-            {console.log(bikeData)}
+            {/* {console.log(bikeData)} */}
                 <form onSubmit={handleFormSubmit}>
             <Modal.Title>Add Ride Details</Modal.Title>
             <Modal.Body>
@@ -76,7 +81,7 @@ function MyModal (props) {
                     </Row>
             </Modal.Body>
             <Modal.Footer>
-                <Button type="submit" variant='primary'>Submit</Button>
+                <Button type="submit" variant='primary' value="Submit" />{' '}
                 <Button onClick={onClose}>Add Ride</Button>
             </Modal.Footer>
                 </form>
