@@ -8,13 +8,13 @@ function MyModal (props) {
     const {show, onClose, shockHours, forkHours, cassetteMiles, chainMiles, chainringMiles, frontDeraileurMiles, rearDeraileurMiles, _id} = props;
 
     const [bikeData, setBikeData] = useState({
-        shockHours: Number(shockHours),
-        forkhours: Number(forkHours),
-        cassetteMiles: Number(cassetteMiles),
-        chainMiles: Number(chainMiles),
-        chainringMiles: Number(chainringMiles),
-        frontDeraileurMiles: Number(frontDeraileurMiles), 
-        rearDeraileurMiles: Number(rearDeraileurMiles)
+        shockHours: shockHours,
+        forkHours: forkHours,
+        cassetteMiles: cassetteMiles,
+        chainMiles: chainMiles,
+        chainringMiles: chainringMiles,
+        frontDeraileurMiles: frontDeraileurMiles, 
+        rearDeraileurMiles: rearDeraileurMiles
     });
 
     const [updateBike] = useMutation(UPDATE_BIKE, {
@@ -26,9 +26,37 @@ function MyModal (props) {
 
         let rideTime = Number(document.getElementById('ride-time').value);
         let rideDistance = Number(document.getElementById('ride-distance').value);
-        console.log(rideTime);
-        console.log(rideDistance);
-    }
+        
+        let newShockHours = Number(shockHours) + rideTime;
+        let newForkHours = Number(forkHours) + rideTime;
+        let newCassetteMiles = Number(cassetteMiles) + rideDistance;
+        let newChainMiles = Number(chainMiles) + rideDistance;
+        let newChainRingMiles = Number(chainringMiles) + rideDistance;
+        let newFrontDeraileurMiles = Number(frontDeraileurMiles) + rideDistance;
+        let newRearDeraileurMiles = Number(rearDeraileurMiles) + rideDistance;
+
+        setBikeData({
+            shockHours: newShockHours.toString(),
+            forkHours: newForkHours.toString(),
+            cassetteMiles: newCassetteMiles.toString(),
+            chainMiles: newChainMiles.toString(),
+            chainringMiles: newChainRingMiles.toString(),
+            frontDeraileurMiles: newFrontDeraileurMiles.toString(),
+            rearDeraileurMiles: newRearDeraileurMiles.toString()
+        })
+
+        try {
+            await updateBike({
+                variables: {
+                    ...bikeData
+                }
+            });
+            console.log(bikeData)
+            console.log('bike updated');
+        } catch(e) {
+            console.error(e);
+        }
+    };
 
     return(
         <Modal show={show} centered>
