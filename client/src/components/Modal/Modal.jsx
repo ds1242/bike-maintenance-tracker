@@ -52,7 +52,7 @@ function MyModal (props) {
         try {
             await updateBike({
                 variables: {
-                    _id,
+                    // _id,
                     ...bikeData
                 }
             });
@@ -66,25 +66,25 @@ function MyModal (props) {
     return(
         <Modal show={show} centered>
             {/* {console.log(bikeData)} */}
-                <form onSubmit={handleFormSubmit}>
-            <Modal.Title>Add Ride Details</Modal.Title>
-            <Modal.Body>
-                    <Row>
-                        <Col>
-                            <h5>Ride Time:</h5>
-                            <input type="number" id='ride-time' placeholder="Hours rounded to nearest hour" />
-                        </Col>
-                        <Col>
-                            <h5>Ride Distance:</h5>
-                            <input type="number" id='ride-distance' placeholder="Miles rounded to nearest full mile" />
-                        </Col>
-                    </Row>
-            </Modal.Body>
-            <Modal.Footer>
-                <Button type="submit" variant='primary' value="Submit" />{' '}
-                <Button onClick={onClose}>Add Ride</Button>
-            </Modal.Footer>
-                </form>
+            <Form onSubmit={handleFormSubmit}>
+                <Modal.Title>Add Ride Details</Modal.Title>
+                <Modal.Body>
+                        <Row>
+                            <Col>
+                                <h5>Ride Time:</h5>
+                                <input type="number" id='ride-time' placeholder="Hours rounded to nearest hour" />
+                            </Col>
+                            <Col>
+                                <h5>Ride Distance:</h5>
+                                <input type="number" id='ride-distance' placeholder="Miles rounded to nearest full mile" />
+                            </Col>
+                        </Row>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button type="submit" variant='primary' >Submit</Button>
+                    <Button onClick={onClose}>Add Ride</Button>
+                </Modal.Footer>
+            </Form>
         </Modal>
 
     )
