@@ -19,10 +19,7 @@ function MyModal (props) {
     });
 
     const [updateBike] = useMutation(UPDATE_BIKE, {
-        variables: { _id: _id },
-        refetchQueries: [
-            { query: QUERY_SINGLE_BIKE }
-        ]
+        variables: { _id: _id }
     });
 
     const handleFormSubmit = async event => {
