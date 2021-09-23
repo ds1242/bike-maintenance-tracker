@@ -48,16 +48,17 @@ function MyModal (props) {
             frontDeraileurMiles: newFrontDeraileurMiles.toString(),
             rearDeraileurMiles: newRearDeraileurMiles.toString()
         })
-    
+
+        console.log('bike updated');
+        // console.log(bikeData);
         try {
             await updateBike({
                 variables: {
-                    // _id,
+                    _id,
                     ...bikeData
                 }
             });
             console.log(bikeData)
-            console.log('bike updated');
         } catch(e) {
             console.error(e);
         }
