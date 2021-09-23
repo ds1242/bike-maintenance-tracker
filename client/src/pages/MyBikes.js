@@ -155,7 +155,20 @@ function MyBikes() {
                 <div>
                 <h3>{make} {model} {year}</h3>
                 <h4> Bike Name: {bikeName} </h4>
-                
+                {handleShow && <MyModal 
+                    key={_id}
+                    show={show}
+                    _id={_id}
+                    forkHours={forkHours}
+                    shockHours={shockHours}
+                    cassetteMiles={cassetteMiles}
+                    chainMiles= {chainMiles}
+                    frontDeraileurMiles={frontDeraileurMiles}
+                    rearDeraileurMiles={rearDeraileurMiles}
+                    chainringMiles={chainringMiles}
+                    onClose={handleClose}
+
+                />}
                 <img src={bikePhoto} alt="User's uploaded bike" />
                 <table className='table'>
                     <thead>
@@ -207,9 +220,15 @@ function MyBikes() {
                 
                 {/* <img src={bikePhoto} alt="user uploaded bike"/> */}
                 <p>{user_id}</p>
-                <Link to={`/`}>
-                    <Button>Back to Home</Button>
-                </Link>
+                <Row>
+                    <Link to={`/`}>
+                        <Button>Back to Home</Button>
+                    </Link>
+                    <Col>
+                        <Button variant="secondary" onClick={handleShow}>Add Ride</Button>
+                    </Col>
+                </Row>
+                
             </div>
         )
     }
