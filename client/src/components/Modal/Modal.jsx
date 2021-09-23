@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Button, Form, Row, Col } from 'react-bootstrap';
-import { useQuery, useMutation } from '@apollo/react-hooks';
+import { useMutation } from '@apollo/react-hooks';
 import { UPDATE_BIKE } from '../../utils/mutations';
 import { QUERY_SINGLE_BIKE } from '../../utils/queries';
 
@@ -67,7 +67,7 @@ function MyModal (props) {
     return(
         <Modal show={show} centered>
             {/* {console.log(bikeData)} */}
-            <Form onSubmit={handleFormSubmit}>
+            <Form >
                 <Modal.Title>Add Ride Details</Modal.Title>
                 <Modal.Body>
                         <Row>
@@ -82,7 +82,7 @@ function MyModal (props) {
                         </Row>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button type="submit" variant='primary' >Submit</Button>
+                    <Button type="submit" variant='primary' onClick={handleFormSubmit} >Submit</Button>
                     <Button onClick={onClose}>Add Ride</Button>
                 </Modal.Footer>
             </Form>
