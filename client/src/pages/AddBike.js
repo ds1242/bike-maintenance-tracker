@@ -82,7 +82,6 @@ const AddBike = () => {
             cassetteMake: '',
             bikePhoto: '',
             bikeName: ''});
-            console.log("bike added!")
             history.push(`/`)
         } catch (e) {
             console.error(e);

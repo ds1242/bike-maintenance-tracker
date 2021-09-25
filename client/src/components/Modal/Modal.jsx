@@ -39,6 +39,8 @@ function MyModal (props) {
         let newFrontDeraileurMiles = Number(frontDeraileurMiles) + rideDistance;
         let newRearDeraileurMiles = Number(rearDeraileurMiles) + rideDistance;
 
+        console.log(newShockHours);
+
         setBikeData({
             shockHours: newShockHours.toString(),
             forkHours: newForkHours.toString(),
@@ -58,6 +60,7 @@ function MyModal (props) {
                     ...bikeData
                 }
             });
+            
             console.log(bikeData)
         } catch(e) {
             console.error(e);
@@ -82,7 +85,7 @@ function MyModal (props) {
                         </Row>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button type="submit" variant='primary' onClick={handleFormSubmit} >Submit</Button>
+                    <Button variant='primary' onClick={handleFormSubmit} >Submit</Button>
                     <Button onClick={onClose}>Add Ride</Button>
                 </Modal.Footer>
             </Form>
