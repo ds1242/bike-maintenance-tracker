@@ -9,6 +9,7 @@ import { Card, Col, Row, Container, Button } from 'react-bootstrap';
 const Home = () => {
 
     const loggedIn = Auth.loggedIn()
+
     const { loading, data } = useQuery(QUERY_ME);
 
     if(loading) {
@@ -29,11 +30,11 @@ const Home = () => {
                    <Row className="justify-content-md-center">
                    {data.me?.bikes.map(bike => {
                        return(
-                           <Col md={3}>
+                           <Col md={3} key={bike._id}>
                             <Link to={`/mybikes/${bike._id}`} key={bike._id}>
-                                <Card>
+                                <Card key={bike._id}>
                                     <Card.Img variant="top" src={bike.bikePhoto} />
-                                    <Card.Title>{bike.bikeName}</Card.Title>
+                                    <Card.Title key={bike._id}>{bike.bikeName}</Card.Title>
                                 </Card>
                             </Link>
                            </Col>
