@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { useQuery, useMutation } from '@apollo/client';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { Form, Button, Container, Col, Row } from 'react-bootstrap';
 import { CREATE_BIKE } from '../utils/mutations';
 import { QUERY_ME } from '../utils/queries'
 
 
 const AddBike = () => {
+    let history = useHistory();
 
     const [bikeData, setBikeData] = useState({
         make: '', 
@@ -82,6 +83,7 @@ const AddBike = () => {
             bikePhoto: '',
             bikeName: ''});
             console.log("bike added!")
+            history.push(`/`)
         } catch (e) {
             console.error(e);
         }
