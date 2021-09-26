@@ -21,13 +21,13 @@ const Home = () => {
     if(loggedIn) {
         return (
             <Container fluid='md' className="homeContainer">
-                <Row className="justify-content-md-center">
-                    <Link to={`/addbike`}>
+                <Row className="justify-content-md-center g-5">
+                    <Link to={`/addbike`} className="g-5">
                         <Button variant="primary" size="lg" active>Add Bike</Button>{' '}
                     </Link>
                 </Row>
                {data.me.bikes.length ? (
-                   <Row className="justify-content-md-center">
+                   <Row className="justify-content-md-center g-4">
                    {data.me?.bikes.map(bike => {
                        return(
                            <Col md={3} key={bike._id}>

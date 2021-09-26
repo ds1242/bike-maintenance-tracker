@@ -47,9 +47,9 @@ function App() {
               <Route exact path='/addbike' component={AddBike} />
             </Switch>
 
-            <Footer />
           </Router>
       </div>
+      <Footer />
     </ApolloProvider>
   );
 }
