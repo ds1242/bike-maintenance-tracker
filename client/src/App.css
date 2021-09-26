@@ -16,3 +16,9 @@ body {
 .add-bike{
   align-items: center;
 }
+
+#card-title {
+  text-decoration: none;
+  color: var(--quartiary_color);
+  text-align: center;
+}

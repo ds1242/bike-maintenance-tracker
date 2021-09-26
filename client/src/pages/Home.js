@@ -31,10 +31,10 @@ const Home = () => {
                    {data.me?.bikes.map(bike => {
                        return(
                            <Col md={3} key={bike._id}>
-                            <Link to={`/mybikes/${bike._id}`} key={bike._id}>
+                            <Link to={`/mybikes/${bike._id}`} key={bike._id} id='card-title'>
                                 <Card key={bike._id}>
                                     <Card.Img variant="top" src={bike.bikePhoto} />
-                                    <Card.Title key={bike._id}>{bike.bikeName}</Card.Title>
+                                    <Card.Title key={bike._id} >{bike.bikeName}</Card.Title>
                                 </Card>
                             </Link>
                            </Col>
