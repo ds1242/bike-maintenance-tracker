@@ -1,9 +1,9 @@
-.footer {
+/* .footer {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-}
+} */
 
 .footer-text {
     color: var(--secondary_color);

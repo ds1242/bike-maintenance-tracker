@@ -10,11 +10,11 @@ nav a:hover {
     color:var(--primary_color)
 }
 
-h3 {
+h3 a {
     color:var(--secondary_color);
     text-decoration:none;
 }
-h3:hover {
+h3 a:hover {
     color:var(--primary_color);
     text-decoration:none;
 }
