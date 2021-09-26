@@ -21,7 +21,7 @@ const Home = () => {
     if(loggedIn) {
         return (
             <Container fluid='md' className="homeContainer">
-                <Row className="justify-content-md-center g-5" >
+                <Row className="justify-content-md-center g-5" id='add-ride-row' >
                     <Link to={`/addbike`} className="add-bike">
                         <Button variant="primary" size="lg" active>Add Bike</Button>{' '}
                     </Link>

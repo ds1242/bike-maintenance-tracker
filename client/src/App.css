@@ -22,3 +22,11 @@ body {
   color: var(--quartiary_color);
   text-align: center;
 }
+
+#add-ride-row {
+  align-content: center;
+}
+.add-bike {
+  align-items: center;
+  width: 200vw;
+}
