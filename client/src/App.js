@@ -13,6 +13,7 @@ import Profile from './pages/Profile';
 import EditProfile from './pages/EditProfile';
 import AddBike from './pages/AddBike';
 import Nav from './components/Nav';
+import Footer from './components/Footer';
 
 
 
@@ -45,6 +46,8 @@ function App() {
               <Route exact path='/editprofile' component={EditProfile} />
               <Route exact path='/addbike' component={AddBike} />
             </Switch>
+
+            <Footer />
           </Router>
       </div>
     </ApolloProvider>
