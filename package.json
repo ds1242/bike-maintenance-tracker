@@ -1,4 +1,5 @@
 {
+  "homepage": "/",
   "name": "bike-maintenance-tracker",
   "version": "1.0.0",
   "description": "Bike maintenance tracker to add track wear on parts and service intervals",
@@ -21,7 +22,6 @@
   "bugs": {
     "url": "https://github.com/ds1242/bike-maintenance-tracker/issues"
   },
-  "homepage": "https://github.com/ds1242/bike-maintenance-tracker#readme",
   "devDependencies": {
     "concurrently": "^6.2.1"
   },
