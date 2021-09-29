@@ -6,7 +6,7 @@ function Footer() {
         <footer className="footer mt-auto py-3 bg-dark">
             <div className="container-fluid">
                 <div className="row">
-                    <div class="col col-lg-10">
+                    <div className="col col-lg-10">
                         <span className="footer-text">Created by David Shaw</span>
                     </div>
                     <div className="col col-lg-2">
