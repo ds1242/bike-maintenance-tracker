@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { LOGIN } from '../utils/mutations'
 import Auth from '../utils/auth';
-import { Button } from 'react-bootstrap'
+import { Button, Form, FormControl, Col, Row} from 'react-bootstrap'
 
 const Login = props => {
     const [formState, setFormState] = useState({ email: '', password: '' });
@@ -32,13 +32,17 @@ const Login = props => {
     return (
         <div>
             <h2>Login</h2>
-            <form onSubmit={handleFormSubmit}>
-                <h3>Email:</h3>
-                <input className='form-input' name='email' type='email' id='email' placeholder='Email' value={formState.email} onChange={handleChange} />
-                <h3>Password:</h3>
-                <input className='form-input' name='password' type='password' id='password' placeholder='Password' value={formState.password} onChange={handleChange} />
+            <Form onSubmit={handleFormSubmit}>
+                <Form.Group>
+                    <Form.Label>Email: </Form.Label>
+                    <Form.Control className='form-input' name='email' type='email' id='email' placeholder='Email' value={formState.email} onChange={handleChange} />
+                </Form.Group>
+                <Form.Group>
+                    <Form.Label>Password:</Form.Label>
+                    <Form.Control className='form-input' name='password' type='password' id='password' placeholder='Password' value={formState.password} onChange={handleChange} />
+                </Form.Group>
                 <Button as="input" type="submit" value="Submit" />{' '}
-            </form>
+            </Form>
                 {error ? (
                     <div>
                         <p className="error-text">The provided credentials are incorrect</p>
