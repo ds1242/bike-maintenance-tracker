@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { LOGIN } from '../utils/mutations'
 import Auth from '../utils/auth';
-import { Button, Form, FormControl, Col, Row, Container} from 'react-bootstrap'
+import { Button, Form, Col, Row, Container} from 'react-bootstrap'
 
 const Login = props => {
     const [formState, setFormState] = useState({ email: '', password: '' });

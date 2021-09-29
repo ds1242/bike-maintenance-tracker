@@ -3,7 +3,7 @@ import Auth from '../utils/auth';
 import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_ME } from '../utils/queries';
-import { Card, Col, Row, Container, Button } from 'react-bootstrap';
+import { Card, Col, Row, Container, Button, Spinner } from 'react-bootstrap';
 
 
 const Home = () => {
@@ -14,7 +14,9 @@ const Home = () => {
 
     if(loading) {
         return(
-            <h2>Loading...</h2>
+            <Spinner animation="border" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </Spinner>
         )
     }
     

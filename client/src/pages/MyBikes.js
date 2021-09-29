@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import { QUERY_SINGLE_BIKE } from '../utils/queries';
 // import Auth from '../utils/auth';
 import { Link } from 'react-router-dom'
-import { Button, Col, Container, Row } from 'react-bootstrap';
+import { Button, Col, Container, Row, Spinner } from 'react-bootstrap';
 import MyModal from '../components/Modal';
 
 function MyBikes() {
@@ -52,7 +52,9 @@ function MyBikes() {
     
     if(loading) {
         return (
-            <h2>Loading...</h2>
+            <Spinner animation="border" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </Spinner>
         )
     };
     if(bikeType === 'Mountain Bike') {       

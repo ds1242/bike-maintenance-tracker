@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // import { Link } from 'react-router-dom';
-import { Form, Button, Container, Col } from 'react-bootstrap';
+import { Form, Button, Container, Col, Spinner } from 'react-bootstrap';
 import { useQuery, useMutation } from '@apollo/react-hooks';
 import { QUERY_ME } from '../utils/queries'
 import { UPDATE_USER } from '../utils/mutations';
@@ -48,7 +48,9 @@ const EditProfile = () => {
 
     if(loading) {
         return(
-            <h2>Loading...</h2>
+            <Spinner animation="border" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </Spinner>
         )
     };
     return (

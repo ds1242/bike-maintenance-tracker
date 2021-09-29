@@ -1,7 +1,7 @@
 import React from 'react';
 // import Auth from '../utils/auth';
 import { Link } from 'react-router-dom';
-import { Card, ListGroup, ListGroupItem, Button, Container, Row, Col } from 'react-bootstrap';
+import { Card, ListGroup, ListGroupItem, Button, Container, Row, Col, Spinner } from 'react-bootstrap';
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_ME } from '../utils/queries'
 
@@ -12,8 +12,11 @@ function Profile() {
     const me = data?.me || {};
     // console.log(me);
     if(loading) {
-        return <h3>Loading...</h3>
-    };
+        return (
+            <Spinner animation="border" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </Spinner>
+    )};
 
 
     return (
