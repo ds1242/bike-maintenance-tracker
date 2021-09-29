@@ -13,3 +13,25 @@ body {
 
 
 
+.add-bike{
+  align-items: center;
+}
+
+#card-title {
+  text-decoration: none;
+  color: var(--quartiary_color);
+  text-align: center;
+}
+
+#add-ride-row {
+  align-content: center;
+}
+.add-bike {
+  align-items: center;
+  width: 200vw;
+}
+
+.profile-card {
+  width:auto;
+  
+}

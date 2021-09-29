@@ -19,8 +19,8 @@ function Profile() {
     return (
         <Container fluid>
             <Row className="justify-content-md-center">
-                <Col sm={8}>
-                    <Card>
+                <Col lg={8}>
+                    <Card className="profile-card">
                         <Card.Img variant="top" src={me.userImage}/>
                         <Card.Body>
                             <Card.Title>{me.name}</Card.Title>
@@ -41,26 +41,26 @@ function Profile() {
             <Row className="justify-content-center">
                 <h3>My Bikes: </h3>
             </Row>
-            <Row className="justify-content-center g-4" xs={1} md={2} id="bike-cards">
                 {me.bikes.length ? (
-                    <Col lg={3}>
+                <Row className="justify-content-center g-4"  id="bike-cards">
                         {me.bikes.map(bike => {
                             return(
-                                <Link to={`/mybikes/${bike._id}`} key={bike._id} >
-                                    <Card key={bike._id} xs={3} lg={8}>
-                                        <Card.Img src={bike.bikePhoto} />
-                                        <Card.Body>
-                                                <Card.Title>{bike.bikeName}</Card.Title>
-                                        </Card.Body>
-                                    </Card> 
-                                </Link>
+                                <Col sm={4}>
+                                    <Link to={`/mybikes/${bike._id}`} key={bike._id} >
+                                        <Card key={bike._id} xs={3} lg={8}>
+                                            <Card.Img src={bike.bikePhoto} />
+                                            <Card.Body>
+                                                    <Card.Title>{bike.bikeName}</Card.Title>
+                                            </Card.Body>
+                                        </Card> 
+                                    </Link>
+                                </Col>
                             )
                         })}
-                    </Col>
+                    </Row>
                 ) : (   
                     <h2>No bikes to view</h2>
                 )}
-            </Row>
         </Container>
     )
 };

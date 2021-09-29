@@ -1,0 +1,15 @@
+/* .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+} */
+
+.footer-text {
+    color: var(--secondary_color);
+}
+
+#footer-icon {
+    width: 1vw;
+    height: 1vw;
+}

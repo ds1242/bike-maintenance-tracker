@@ -21,20 +21,20 @@ const Home = () => {
     if(loggedIn) {
         return (
             <Container fluid='md' className="homeContainer">
-                <Row className="justify-content-md-center">
-                    <Link to={`/addbike`}>
+                <Row className="justify-content-md-center g-5" id='add-ride-row' >
+                    <Link to={`/addbike`} className="add-bike">
                         <Button variant="primary" size="lg" active>Add Bike</Button>{' '}
                     </Link>
                 </Row>
                {data.me.bikes.length ? (
-                   <Row className="justify-content-md-center">
+                   <Row className="justify-content-md-center g-4">
                    {data.me?.bikes.map(bike => {
                        return(
                            <Col md={3} key={bike._id}>
-                            <Link to={`/mybikes/${bike._id}`} key={bike._id}>
+                            <Link to={`/mybikes/${bike._id}`} key={bike._id} id='card-title'>
                                 <Card key={bike._id}>
                                     <Card.Img variant="top" src={bike.bikePhoto} />
-                                    <Card.Title key={bike._id}>{bike.bikeName}</Card.Title>
+                                    <Card.Title key={bike._id} >{bike.bikeName}</Card.Title>
                                 </Card>
                             </Link>
                            </Col>

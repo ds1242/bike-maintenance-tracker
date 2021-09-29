@@ -1,7 +1,20 @@
 nav {
-    background-color: var(--cinqieme_color);
+    background-color: var(--quartiary_color);
 }
 
 nav a {
-    color:var(--tertiary_color);
+    color:var(--secondary_color);
+}
+
+nav a:hover {
+    color:var(--primary_color)
+}
+
+h3 a {
+    color:var(--secondary_color);
+    text-decoration:none;
+}
+h3 a:hover {
+    color:var(--primary_color);
+    text-decoration:none;
 }

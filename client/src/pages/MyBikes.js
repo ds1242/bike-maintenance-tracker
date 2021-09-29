@@ -141,11 +141,11 @@ function MyBikes() {
                 {/* <img src={bikePhoto} alt="user uploaded bike"/> */}
                 <p>{user_id}</p>
                 <Row>
-                    <Link to={`/`}>
-                        <Button>Back to Home</Button>
-                    </Link>
-                    <Col>
+                    <Col className="gx-4">
                         <Button variant="secondary" onClick={handleShow}>Add Ride</Button>
+                        <Link to={`/`}>
+                            <Button variant="success">Back to Home</Button>
+                        </Link>
                     </Col>
                 </Row>
             </Container>
