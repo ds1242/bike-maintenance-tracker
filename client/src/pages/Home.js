@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_ME } from '../utils/queries';
 import { Card, Col, Row, Container, Button, Spinner, Carousel } from 'react-bootstrap';
+import carouselimg1 from '../assets/home-photo.jpg';
+import carouselimg2 from '../assets/resizeimg2.jpg';
+import carouselimg3 from '../assets/resizeimg3.jpg';
 
 
 const Home = () => {
@@ -49,7 +52,48 @@ const Home = () => {
         )
     } else {
         return (
-            <Container fluid="md" className="homeContainer">
+            <Container fluid className="homeContainer">
+                <Carousel>
+                    <Carousel.Item>
+                        <img 
+                            className="d-block w-100"
+                            src={carouselimg1}
+                            alt="first slide"
+                        />
+                        <Carousel.Caption>
+                            <h3>Welcome to Bike Tracker</h3>
+                            <p>Sign up today and start tracking the maintenance for your bikes in one easy place!</p>
+                        </Carousel.Caption>
+
+
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img 
+                            className="d-block w-100"
+                            src={carouselimg2}
+                            alt="first slide"
+                        />
+                        <Carousel.Caption>
+                            <h3>Welcome to Bike Tracker</h3>
+                            <p>Sign up today and start tracking the maintenance for your bikes in one easy place!</p>
+                        </Carousel.Caption>
+
+
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img 
+                            className="d-block w-100"
+                            src={carouselimg2}
+                            alt="first slide"
+                        />
+                        <Carousel.Caption>
+                            <h3>Welcome to Bike Tracker</h3>
+                            <p>Sign up today and start tracking the maintenance for your bikes in one easy place!</p>
+                        </Carousel.Caption>
+
+
+                    </Carousel.Item>
+                 </Carousel>   
                 <Row>
 
                     <Link to={'/signup'} className='home-links'>
