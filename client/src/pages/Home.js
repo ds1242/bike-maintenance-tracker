@@ -3,7 +3,7 @@ import Auth from '../utils/auth';
 import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_ME } from '../utils/queries';
-import { Card, Col, Row, Container, Button, Spinner } from 'react-bootstrap';
+import { Card, Col, Row, Container, Button, Spinner, Carousel } from 'react-bootstrap';
 
 
 const Home = () => {
@@ -49,14 +49,17 @@ const Home = () => {
         )
     } else {
         return (
-            <div className="homeContainer">
-                <Link to={'/signup'} className='home-links'>
-                    <h3>Click Here to Sign Up</h3>
-                </Link>
-                <Link to={'/login'}>
-                    <h3>Already a member? Click Here to Login</h3>
-                </Link>
-            </div>
+            <Container fluid="md" className="homeContainer">
+                <Row>
+
+                    <Link to={'/signup'} className='home-links'>
+                        <h3>Click Here to Sign Up</h3>
+                    </Link>
+                    <Link to={'/login'}>
+                        <h3>Already a member? Click Here to Login</h3>
+                    </Link>
+                </Row>
+            </Container>
         );
     }
 };
