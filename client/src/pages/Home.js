@@ -64,43 +64,37 @@ const Home = () => {
                             <h3>Welcome to Bike Tracker</h3>
                             <p>Sign up today and start tracking the maintenance for your bikes in one easy place!</p>
                         </Carousel.Caption>
-
-
                     </Carousel.Item>
                     <Carousel.Item>
                         <img 
                             className="d-block w-100"
                             src={carouselimg2}
-                            alt="first slide"
+                            alt="second slide"
                         />
                         <Carousel.Caption>
-                            <h3>Welcome to Bike Tracker</h3>
-                            <p>Sign up today and start tracking the maintenance for your bikes in one easy place!</p>
+                            <h3>Track Any of Your Bikes!</h3>
+                            <p>Raod, Mountain, Gravel, Cyclocross, E-bikes!</p>
                         </Carousel.Caption>
-
-
                     </Carousel.Item>
                     <Carousel.Item>
                         <img 
                             className="d-block w-100"
-                            src={carouselimg2}
-                            alt="first slide"
+                            src={carouselimg3}
+                            alt="third slide"
                         />
                         <Carousel.Caption>
-                            <h3>Welcome to Bike Tracker</h3>
+                            <h3>Click the buttons below to sign up or login!</h3>
                             <p>Sign up today and start tracking the maintenance for your bikes in one easy place!</p>
                         </Carousel.Caption>
-
-
                     </Carousel.Item>
                  </Carousel>   
                 <Row>
 
                     <Link to={'/signup'} className='home-links'>
-                        <h3>Click Here to Sign Up</h3>
+                        <Button>Click Here to Sign Up</Button>
                     </Link>
                     <Link to={'/login'}>
-                        <h3>Already a member? Click Here to Login</h3>
+                        <Button>Already a member? Click Here to Login</Button>
                     </Link>
                 </Row>
             </Container>
