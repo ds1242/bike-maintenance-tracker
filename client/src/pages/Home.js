@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_ME } from '../utils/queries';
 import { Card, Col, Row, Container, Button, Spinner, Carousel } from 'react-bootstrap';
-import carouselimg1 from '../assets/home-photo.jpg';
+import carouselimg1 from '../assets/home-photo-resize.jpg';
 import carouselimg2 from '../assets/resizeimg2.jpg';
 import carouselimg3 from '../assets/resizeimg3.jpg';
 
@@ -53,7 +53,7 @@ const Home = () => {
     } else {
         return (
             <Container fluid className="homeContainer">
-                <Carousel>
+                <Carousel className="carousel-images">
                     <Carousel.Item>
                         <img 
                             className="d-block w-100"
@@ -88,14 +88,21 @@ const Home = () => {
                         </Carousel.Caption>
                     </Carousel.Item>
                  </Carousel>   
-                <Row>
-
+                <Row className="justify-content-md-center">  
+                    <Col>
+                    </Col>
+                    <Col>
                     <Link to={'/signup'} className='home-links'>
                         <Button>Click Here to Sign Up</Button>
                     </Link>
+                    </Col>
+                    <Col>
                     <Link to={'/login'}>
-                        <Button>Already a member? Click Here to Login</Button>
+                        <Button>Click Here to Login</Button>
                     </Link>
+                    </Col>
+                    <Col>
+                    </Col>
                 </Row>
             </Container>
         );

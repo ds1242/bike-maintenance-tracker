@@ -35,3 +35,8 @@ body {
   width:auto;
   
 }
+
+.carousel-images img{
+  max-width: 100%;
+  height: 100%;
+}
