@@ -42,12 +42,20 @@ function SignUp() {
                     <Form onSubmit={handleFormSubmit}>
                         <Form.Group className="mb-3" controlId="email">
                             <Form.Label>Email: </Form.Label>
-                            <Form.Control className='form-input' name='email' type='email' placeholder='Email' value={formState.email} onChange={handleChange} />
+                            <Form.Control className='form-input' name='email' type='email' placeholder='Enter Your Email' value={formState.email} onChange={handleChange} />
                         </Form.Group>
-                        <input type='email' name='email' placeholder="Email"  />
-                        <input type='name' name='name' placeholder='Name' value={formState.name} onChange={handleChange} />
-                        <input type='username' name='username' placeholder='Username' value={formState.username} onChange={handleChange} />
-                        <input type='password' name='password' placeholder='Password' value={formState.password} onChange={handleChange} />
+                        <Form.Group className="mb-3" controlId="name">
+                            <Form.Label>Name: </Form.Label>
+                            <Form.Control className='form-input' name='name' type='text' placeholder='Enter Your Name' value={formState.name} onChange={handleChange} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="username">
+                            <Form.Label>Username: </Form.Label>
+                            <Form.Control className='form-input' name='username' type='text' placeholder='Create a Username' value={formState.username} onChange={handleChange} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="password">
+                            <Form.Label>Password: </Form.Label>
+                            <Form.Control className='form-input' name='password' type='password' placeholder='Create a Password' value={formState.password} onChange={handleChange} />
+                        </Form.Group>
                         <Button as='input' type='submit' value='Sign Up!' />{' '}
                     </Form>
                 </Col>
