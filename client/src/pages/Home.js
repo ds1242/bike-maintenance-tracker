@@ -89,20 +89,18 @@ const Home = () => {
                     </Carousel.Item>
                  </Carousel>   
                 <Row className="justify-content-md-center">  
-                    <Col>
-                    </Col>
-                    <Col>
+                    
+                    <Col className="justify-content-md-center" lg={6}>
                     <Link to={'/signup'} className='home-links'>
                         <Button>Click Here to Sign Up</Button>
                     </Link>
                     </Col>
-                    <Col>
+                    <Col className="justify-content-md-center" lg={6}>
                     <Link to={'/login'}>
                         <Button>Click Here to Login</Button>
                     </Link>
                     </Col>
-                    <Col>
-                    </Col>
+                    
                 </Row>
             </Container>
         );
