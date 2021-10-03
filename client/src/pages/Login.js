@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { LOGIN } from '../utils/mutations'
 import Auth from '../utils/auth';
+import { Link } from 'react-router-dom';
 import { Button, Form, Col, Row, Container} from 'react-bootstrap'
 
 const Login = props => {
@@ -56,6 +57,7 @@ const Login = props => {
                         <p className="error-text">The provided credentials are incorrect</p>
                     </div>
                 ) : null}
+            <Link to={'/signup'} className="login-redirect">Not a member? Click here to signup!</Link>
         </Container>
     )
 
