@@ -32,7 +32,7 @@ const Home = () => {
                     </Link>
                 </Row>
                {data.me.bikes.length ? (
-                   <Row className="justify-content-md-center g-4">
+                   <Row className="justify-content-md-center g-4 bike-cards">
                    {data.me?.bikes.map(bike => {
                        return(
                            <Col md={3} key={bike._id}>
