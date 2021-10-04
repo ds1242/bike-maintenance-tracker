@@ -88,7 +88,7 @@ const Home = () => {
                         </Carousel.Caption>
                     </Carousel.Item>
                  </Carousel>   
-                <Row className="justify-content-md-center">  
+                <Row className="justify-content-md-center homepage-buttons">  
                     <Col className="justify-content-md-center" lg={6}>
                         <Link to={'/signup'} className='home-links'>
                             <Button>Click Here to Sign Up</Button>

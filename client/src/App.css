@@ -44,3 +44,10 @@ body {
 .login-redirect {
   text-decoration: none;
 }
+
+.homepage-buttons {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
