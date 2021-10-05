@@ -159,9 +159,13 @@ function MyBikes() {
     )
     } else if(bikeType === 'Road Bike') {
         return (
-                <div>
-                <h3>{make} {model} {year}</h3>
-                <h4> Bike Name: {bikeName} </h4>
+                <Container fluid>
+                    <Row>
+                        <h3>{make} {model} {year}</h3>
+                    </Row>
+                    <Row>
+                        <h4> Bike Name: {bikeName} </h4>
+                    </Row>
                 {handleShow && <MyModal 
                     key={_id}
                     show={show}
@@ -176,7 +180,9 @@ function MyBikes() {
                     onClose={handleClose}
 
                 />}
-                <img src={bikePhoto} alt="User's uploaded bike" />
+                <Row className="justify-content-center">
+                    <img src={bikePhoto} alt="User's uploaded bike" />
+                </Row>
                 <table className='table'>
                     <thead>
                         <tr>
@@ -228,15 +234,15 @@ function MyBikes() {
                 {/* <img src={bikePhoto} alt="user uploaded bike"/> */}
                 <p>{user_id}</p>
                 <Row>
-                    <Link to={`/`}>
-                        <Button>Back to Home</Button>
-                    </Link>
-                    <Col>
+                    <Col className="gx-4">
                         <Button variant="secondary" onClick={handleShow}>Add Ride</Button>
+                        <Link to={`/`}>
+                            <Button variant="success">Back to Home</Button>
+                        </Link>
                     </Col>
                 </Row>
                 
-            </div>
+            </Container>
         )
     }
 }
