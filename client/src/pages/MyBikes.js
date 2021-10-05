@@ -62,10 +62,15 @@ function MyBikes() {
 
         return (
             <Container fluid>
+                <Row>
                 <h3>{make} {model} {year}</h3>
+                </Row>
                 <h4> Bike Name: {bikeName} </h4>
-                <img src={bikePhoto} alt="User's uploaded bike" />
-                
+                <Row className="justify-content-center">
+                    {/* <Col> */}
+                        <img src={bikePhoto} alt="User's uploaded bike" />
+                    {/* </Col> */}
+                </Row>
                 {handleShow && <MyModal 
                     key={_id}
                     show={show}
