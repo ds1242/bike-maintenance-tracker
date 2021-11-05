@@ -28,8 +28,11 @@ body {
   align-content: center;
 }
 .add-bike {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  width: 200vw;
+  height: 5vw;
+  text-decoration: none;;
 }
 
 .profile-card {
@@ -41,6 +44,7 @@ body {
 }
 .carousel-images img{
   max-width: 100%;
+
   /* height: 10%; */
 }
 #carousel-img {
@@ -53,3 +57,4 @@ body {
 #login-container {
   height: 85vh;
 }
+
