@@ -49,3 +49,7 @@ body {
 #signup-buttons {
   height: 25vh;
 }
+
+#login-container {
+  height: 85vh;
+}

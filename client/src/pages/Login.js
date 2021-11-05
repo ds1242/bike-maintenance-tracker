@@ -30,8 +30,8 @@ const Login = props => {
     };
 
     return (
-        <Container fluid="md">
-            <Row className="justify-content-md-center">
+        <Container fluid="md" id='login-container'>
+            <Row className="justify-content-md-center" >
                 <Col>
                     <h2>Login</h2>
                 </Col>
