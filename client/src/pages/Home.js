@@ -53,10 +53,11 @@ const Home = () => {
     } else {
         return (
             <Container fluid className="homeContainer">
-                <Carousel className="carousel-images">
+                <Carousel id='carousel' className="carousel-images">
                     <Carousel.Item>
                         <img 
                             className="d-block w-100"
+                            id='carousel-img'
                             src={carouselimg1}
                             alt="first slide"
                         />
@@ -68,6 +69,7 @@ const Home = () => {
                     <Carousel.Item>
                         <img 
                             className="d-block w-100"
+                            id='carousel-img'
                             src={carouselimg2}
                             alt="second slide"
                         />
@@ -79,6 +81,7 @@ const Home = () => {
                     <Carousel.Item>
                         <img 
                             className="d-block w-100"
+                            id='carousel-img'
                             src={carouselimg3}
                             alt="third slide"
                         />
@@ -88,16 +91,21 @@ const Home = () => {
                         </Carousel.Caption>
                     </Carousel.Item>
                  </Carousel>   
-                <Row className="justify-content-md-center homepage-buttons">  
-                    <Col className="justify-content-md-center" lg={6}>
+                <Row className="justify-content-md-center align-items-center" id='signup-buttons'>  
+                    <Col lg={2}>
+                    </Col>
+                    <Col className="justify-content-end align-items-end" lg={4}>
+
                         <Link to={'/signup'} className='home-links'>
                             <Button>Click Here to Sign Up</Button>
                         </Link>
                     </Col>
-                    <Col className="justify-content-md-center" lg={6}>
+                    <Col  lg={4}>
                         <Link to={'/login'}>
                             <Button>Click Here to Login</Button>
                         </Link>
+                    </Col>
+                    <Col lg={2}>
                     </Col>
                 </Row>
             </Container>

@@ -9,6 +9,7 @@
 
 body {
   color: var(--primary_color);
+  background-color: var(--quartiary_color);
 }
 
 
@@ -38,24 +39,22 @@ body {
   width:auto;
   
 }
-
+.carousel-images {
+  height: 40%;
+}
 .carousel-images img{
   max-width: 100%;
-  height: 100%;
+
+  /* height: 10%; */
+}
+#carousel-img {
+  height: 60vh;
+}
+#signup-buttons {
+  height: 25vh;
 }
 
-.login-redirect {
-  text-decoration: none;
-}
-
-.homepage-buttons {
-  height: 2vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.bike-cards {
-  margin: 50px;
+#login-container {
+  height: 85vh;
 }
 

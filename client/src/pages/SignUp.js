@@ -31,7 +31,7 @@ function SignUp() {
     };
 
     return (
-        <Container fluid="md">
+        <Container fluid="md" id='login-container'>
             <Row className="justify-content-md-center">
                 <Col>
                     <h2>Sign Up</h2>
