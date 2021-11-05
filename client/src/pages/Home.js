@@ -94,7 +94,7 @@ const Home = () => {
                 <Row className="justify-content-md-center" id='signup-buttons'>  
                     <Col lg={2}>
                     </Col>
-                    <Col className="justify-content-end align-items-left" lg={4}>
+                    <Col className="justify-content-end align-items-center" lg={4}>
                         <Link to={'/signup'} className='home-links'>
                             <Button>Click Here to Sign Up</Button>
                         </Link>

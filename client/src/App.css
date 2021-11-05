@@ -9,6 +9,7 @@
 
 body {
   color: var(--primary_color);
+  background-color: var(--quartiary_color);
 }
 
 
