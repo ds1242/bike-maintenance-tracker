@@ -65,7 +65,7 @@ function SignUp() {
                     <p className='error-text'>Something went wrong signing up</p>
                 </div>
             ) : null}
-            <Link to={'/login'}>Click here to login if already a user</Link>
+            <Link to={'/login'} className="login-redirect">Click here to login if already a user</Link>
         </Container>
     )
 };

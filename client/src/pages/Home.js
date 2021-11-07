@@ -32,7 +32,7 @@ const Home = () => {
                     </Link>
                 </Row>
                {data.me.bikes.length ? (
-                   <Row className="justify-content-md-center g-4">
+                   <Row className="justify-content-md-center g-4 bike-cards">
                    {data.me?.bikes.map(bike => {
                        return(
                            <Col md={3} key={bike._id}>
@@ -95,6 +95,7 @@ const Home = () => {
                     <Col lg={2}>
                     </Col>
                     <Col className="justify-content-end align-items-end" lg={4}>
+
                         <Link to={'/signup'} className='home-links'>
                             <Button>Click Here to Sign Up</Button>
                         </Link>
