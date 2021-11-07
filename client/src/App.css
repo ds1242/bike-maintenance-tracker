@@ -53,3 +53,7 @@ body {
 #login-container {
   height: 85vh;
 }
+
+#homeLoggedInContainer{
+  height: 89vh;
+}
